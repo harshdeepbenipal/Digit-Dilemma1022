@@ -37,3 +37,6 @@ Functional Requirements:
 - Each scoreboard will display the top 10 scores of that particular difficulty level.
 - The user can view the scoreboard by clicking a button that is present in the footer
 - The user can then choose the type of scoreboard they want to view by clicking on easy, medium or hard.
+
+GOOGLE DRIVE LINK:
+https://drive.google.com/drive/folders/1rIJ34ivV6iK1RwYx-wehO_C48cws83mG?usp=sharing
