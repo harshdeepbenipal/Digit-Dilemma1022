@@ -2,21 +2,15 @@ Team Name: Code Chasers
 
 Team Members:
 
-Harsh-Deep Benipal
-  hrsh9133@my.yorku.ca
-    Section N Lab 02
-Vincent Tran
-  vince03@my.yorku.ca
-    Section N Lab 02
-Gurtaj Dhindsa
-  dhindsag@my.yorku.ca
-    Section N Lab 01
-Khalia Brown
-  khaliab@my.yorku.ca
-    Section N Lab 02
+Harsh-Deep Benipal, hrsh9133@my.yorku.ca, Section N Lab 02
+Vincent Tran, vince03@my.yorku.ca, Section N Lab 02
+Gurtaj Dhindsa, dhindsag@my.yorku.ca, Section N Lab 01
+Khalia Brown, khaliab@my.yorku.ca, Section N Lab 02
 
 
-Project: What number between 1 and X am I thinking of, using as few guesses as possible.
+Project: What number between 1 and X am I thinking of, using as few guesses as possible. 
+
+App Name: Digit Dillema
 
 Description:
 
