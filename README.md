@@ -22,21 +22,20 @@ Functional Requirements:
 - A “Home” button and a “?” (help button) will be displayed in the footer for all screens
 - Upon clicking the play button the app will prompt the user to input their name and choose a difficulty level
 - The difficulty levels will be displayed as 3 buttons from easy - 1 to 20, medium - 1 to 50 and hard 1 to 100 
-- The app will decide a new number between 1 and X ( X given the range chosen from the difficulty level) and choose a number using random between this range for the user to attempt 
+- The app will decide a new number between 1 and X ( X given the range chosen from the difficulty level)
 - The app will display how many attempts the user has done so far in the top right corner 
 - If the user guesses incorrectly, the generated number will remain the same while the app will add 1 guess to their score and prompt the user to guess again
-- If the user inputs a value that isn’t between 1 and X the app will alert the user and allow them to input again, (this guess won't be considered for the guess counter)
+- If the user inputs a value that isn’t between 1 and X the app will alert the user and allow them to input again
 - The generated number will be displayed after the user forfeits or guesses correctly 
-- If the user guesses correctly they will be given the option to play again 
 - If the player chooses to play again, their previous score on the scoreboard will be replaced as long as the attempts taken were less than their previous 
-- The score will then be added to the corresponding difficulty scoreboard if the score is lower than the rest or any that are present, along with their name and date the score was acquired. 
 - If the name of the user is already present on the scoreboard their previous score will be replaced if the new score is lower
-- The user will be alerted of their score and, if their name is already on the scoreboard, will be notified if their high score increased (user will be congratulated if in the top 3 for the scoreboard)
+- The user will be alerted of their score and, if their name is already on the scoreboard, will be notified if their high score increased
 - The scoreboard will be based on which mode of difficulty the user chose and the order will be least guesses used, least to most
 - There will be 3 scoreboards one for each difficulty level
 - Each scoreboard will display the top 10 scores of that particular difficulty level.
 - The user can view the scoreboard by clicking a button that is present in the footer
-- The user can then choose the type of scoreboard they want to view by clicking on easy, medium or hard.
+
+![Phase 2 (Wireframes) - 1022](https://user-images.githubusercontent.com/60611662/154806305-6f2f9730-b7e0-4769-8b47-16fe5dabb663.png)
 
 GOOGLE DRIVE LINK:
 https://drive.google.com/drive/folders/1rIJ34ivV6iK1RwYx-wehO_C48cws83mG?usp=sharing
