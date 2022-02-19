@@ -9,7 +9,7 @@ Team Members:
 
 Project: What number between 1 and X am I thinking of, using as few guesses as possible. 
 
-App Name: Digit Dillema
+App Name: Digit Dilemma
 
 Description:
 
