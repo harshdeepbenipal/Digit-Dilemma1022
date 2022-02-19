@@ -9,6 +9,8 @@ Team Members:
 
 Project: What number between 1 and X am I thinking of, using as few guesses as possible. 
 
+**Phase 1:**
+
 App Name: Digit Dilemma
 
 Description:
@@ -34,6 +36,8 @@ Functional Requirements:
 - There will be 3 scoreboards one for each difficulty level
 - Each scoreboard will display the top 10 scores of that particular difficulty level.
 - The user can view the scoreboard by clicking a button that is present in the footer
+
+**Phase 2 Wireframes:**
 
 ![Phase 2 (Wireframes) - 1022](https://user-images.githubusercontent.com/60611662/154806305-6f2f9730-b7e0-4769-8b47-16fe5dabb663.png)
 
