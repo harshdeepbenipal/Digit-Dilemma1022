@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DigitDilema</string>
+    <string name="play">PLAY</string>
+    <string name="header">Header</string>
 </resources>
