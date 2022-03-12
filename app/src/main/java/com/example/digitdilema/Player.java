@@ -17,12 +17,10 @@ public class Player {
         return score;
     }
     public String getInformation(boolean change){
-        String x;
         if(change){
-            x = "Congratulations! New Score of" + score + "!";
+            return "Congratulations! New Score of" + score + "!";
         }else{
-            x = "Better Luck Next Time!";
+            return "Better Luck Next Time!";
         }
-        return x;
     }
 }
