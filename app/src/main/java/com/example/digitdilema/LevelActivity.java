@@ -4,19 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class InputNameActivity extends AppCompatActivity {
+public class LevelActivity extends AppCompatActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inputname);
+        setContentView(R.layout.levelmenu);
 
         // footer menu, add to every oncreate method
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView2);
@@ -39,21 +38,6 @@ public class InputNameActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-    }
-
-    // enter button
-    public void buttonClicked(View v){
-        EditText nameView = (EditText) findViewById(R.id.name);
-        String nS = nameView.getText().toString();
-
-        Player player = new Player();
-        player.setName(nS);
-
-        Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-        startActivity(intent);
-        overridePendingTransition(0,0);
-
     }
 
     // header menu
