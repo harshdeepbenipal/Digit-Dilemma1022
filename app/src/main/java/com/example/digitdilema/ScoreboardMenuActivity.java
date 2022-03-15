@@ -28,7 +28,7 @@ public class ScoreboardMenuActivity extends AppCompatActivity {
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.info:
+                    case R.id.help:
                         Intent intent1 = new Intent(getApplicationContext(), InfoActivity.class);
                         startActivity(intent1);
                         overridePendingTransition(0,0);

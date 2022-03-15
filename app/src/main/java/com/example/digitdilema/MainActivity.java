@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, InputNameActivity.class);
+                Intent intent = new Intent(MainActivity.this, LevelActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.home:
                         return true;
-                    case R.id.info:
+                    case R.id.help:
                         Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);

@@ -32,7 +32,7 @@ public class InfoActivity extends AppCompatActivity {
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.info:
+                    case R.id.help:
                         return true;
 
                 }

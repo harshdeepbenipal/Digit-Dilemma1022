@@ -29,7 +29,7 @@ public class InputNameActivity extends AppCompatActivity {
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.info:
+                    case R.id.help:
                         Intent intent1 = new Intent(getApplicationContext(), InfoActivity.class);
                         startActivity(intent1);
                         overridePendingTransition(0,0);
@@ -49,8 +49,9 @@ public class InputNameActivity extends AppCompatActivity {
 
         Player player = new Player();
         player.setName(nS);
-
-        Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
+        ScoreBoard current = LevelActivity.getCurrent();
+        current.setPlayer(player);//Still gotta go over it
+        Intent intent = new Intent(getApplicationContext(), GameScreen.class);
         startActivity(intent);
         overridePendingTransition(0,0);
 
