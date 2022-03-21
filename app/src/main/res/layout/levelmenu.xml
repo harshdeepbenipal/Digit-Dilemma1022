@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/levelMenu"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
 
     <TextView
@@ -12,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/select_menu"
+        android:text="SELECT LEVEL"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -24,7 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/easy_1_20"
+        android:text="EASY 1-20"
         android:onClick="buttonClicked"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/medium_1_50"
+        android:text="MEDIUM 1-50"
         android:onClick="buttonClicked"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/easy"
@@ -56,7 +58,7 @@
         android:layout_marginTop="44dp"
         android:fontFamily="sans-serif-condensed"
         android:onClick="buttonClicked"
-        android:text="@string/hard_1_100"
+        android:text="HARD 1-100"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/medium"
         app:layout_constraintHorizontal_bias="0.0"
