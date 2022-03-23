@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitDilema">
         <activity
+            android:name=".MainActivity2"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HardScoreboard"
+            android:exported="false" />
+        <activity
+            android:name=".MediumScoreboard"
+            android:exported="false" />
+        <activity
+            android:name=".scoreboard_menu"
+            android:exported="false" />
+        <activity
+            android:name=".easyscoreboard"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,10 +39,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InfoActivity"></activity>
-        <activity android:name=".ScoreboardMenuActivity"></activity>
-        <activity android:name=".InputNameActivity"></activity>
-        <activity android:name=".LevelActivity"></activity>
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".ScoreboardMenuActivity" />
+        <activity android:name=".InputNameActivity" />
+        <activity android:name=".LevelActivity" />
     </application>
 
 </manifest>
