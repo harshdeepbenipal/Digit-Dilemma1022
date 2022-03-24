@@ -22,10 +22,8 @@
     <string name="medium_scoreboard">MEDIUM SCOREBOARD</string>
     <string name="_5">5</string>
     <string name="_7">7</string>
-    <string name="_5">5</string>
-    <string name="_7">7</string>
-    <string name="_3">3</string>
-    <string name="date">DATE</string>
-    <string name="_6">6</string>
     <string name="hard_scoreboard">HARD SCOREBOARD</string>
+    <string name="date">DATE</string>
+    <string name="_3">3</string>
+    <string name="_6">6</string>
 </resources>

@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.home:
                         return true;
                     case R.id.help:
@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
                         boolean focusable = true; // lets taps outside the popup close the window
                         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
 
-                        popupWindow.showAtLocation(layout, Gravity.CENTER, 0,0);
+                        popupWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
 
-                        popupView.setOnTouchListener(new View.OnTouchListener(){
+                        popupView.setOnTouchListener(new View.OnTouchListener() {
                             @Override
                             public boolean onTouch(View view, MotionEvent motionEvent) {
                                 popupWindow.dismiss();
@@ -80,7 +80,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-    }
+}
+
+
     // header menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -97,9 +99,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 overridePendingTransition(0,0);
                 break;
+
+
+
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
+
 
 
 }

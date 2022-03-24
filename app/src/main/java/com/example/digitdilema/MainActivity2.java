@@ -14,11 +14,13 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scoreboard_menu);
+        setContentView(R.layout.scoreboardmenu);
 
-        Button easybutton = (Button) findViewById(R.id.easyscoreboardbutton);
-        Button medbutton = (Button) findViewById(R.id.mediumscoreboardbutton);
-        Button hardbutton = (Button) findViewById(R.id.hardscoreboardbutton);
+
+        Button easybutton = (Button) findViewById(R.id.button1);
+        Button medbutton = (Button) findViewById(R.id.button2);
+        Button hardbutton = (Button) findViewById(R.id.button3);
+
         easybutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,4 +47,5 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(intent); }
         });
     }
+
 }

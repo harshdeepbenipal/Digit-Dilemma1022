@@ -9,7 +9,7 @@
     <!--  Footer menu, copy to each layout file  -->
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
@@ -30,10 +30,10 @@
         android:fontFamily="sans-serif-condensed"
         android:text="MEDIUM (1-50)"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/button1"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <Button
         android:id="@+id/button3"
