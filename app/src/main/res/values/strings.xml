@@ -5,4 +5,27 @@
     <string name="enter">ENTER</string>
     <string name="what_is_your_name">What is your name?</string>
     <string name="select_level">Select Level</string>
+    <string name="score">SCORE</string>
+    <string name="name">NAME</string>
+    <string name="_10">10</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="easy_scoreboard">EASY SCOREBOARD</string>
+    <string name="_1">1</string>
+    <string name="rank">RANK</string>
+    <string name="_4">4</string>
+    <string name="_2">2</string>
+    <string name="medium">MEDIUM</string>
+    <string name="easy_1_20">EASY (1-20)</string>
+    <string name="scoreboards">SCOREBOARDS</string>
+    <string name="hard">HARD</string>
+    <string name="medium_scoreboard">MEDIUM SCOREBOARD</string>
+    <string name="_5">5</string>
+    <string name="_7">7</string>
+    <string name="_5">5</string>
+    <string name="_7">7</string>
+    <string name="_3">3</string>
+    <string name="date">DATE</string>
+    <string name="_6">6</string>
+    <string name="hard_scoreboard">HARD SCOREBOARD</string>
 </resources>
