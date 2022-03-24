@@ -3,9 +3,9 @@ package com.example.digitdilema;
 public class ScoreBoard {
     private static Player player = new Player();
     private static int level;
-    private static ScoreBoard sbEasy[] = new ScoreBoard[11];
-    private static ScoreBoard sbMedium[] = new ScoreBoard[11];
-    private static ScoreBoard sbHard[] = new ScoreBoard[11];
+    private static ScoreBoard sbEasy[] = new ScoreBoard[10];
+    private static ScoreBoard sbMedium[] = new ScoreBoard[10];
+    private static ScoreBoard sbHard[] = new ScoreBoard[10];
 
     public ScoreBoard(){
         setPlayer(null);
@@ -13,7 +13,6 @@ public class ScoreBoard {
     }
     public ScoreBoard(Player player){
         setPlayer(player);
-
     }
     public void setPlayer(Player player) {
         this.player = player;
@@ -59,6 +58,20 @@ public class ScoreBoard {
             } else if (level == 3 && sbHard[checkName()].getPlayer().getScore() > player.getScore()) {
                 sbHard[checkName()].setPlayer(player);
             }
+        }
+    }
+    public static void sort(ScoreBoard[] list){ // Implement in the scoreboards java files maybe also with given array not sure
+        for (int i = 1; i < list.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (list[j].getPlayer().getScore() < list[j - 1].getPlayer().getScore()) {
+                    ScoreBoard temp = list[j];
+                    list[j] = list[j - 1];
+                    list[j - 1] = temp;
+                }
+            }
+        }
+        for(int i = 0;i< list.length;i++){
+            list[i].getPlayer().setRank(i);
         }
     }
 }
