@@ -49,10 +49,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.home:
                         return true;
                     case R.id.help:
-                        /*Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
-                        startActivity(intent);
-                        overridePendingTransition(0,0);
-                        return true;*/
                         ConstraintLayout layout = findViewById(R.id.main);
                         // inflate the layout of the popup window
                         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
