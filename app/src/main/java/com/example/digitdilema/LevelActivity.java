@@ -83,6 +83,10 @@ public class LevelActivity extends AppCompatActivity {
                 temp.setLevel(3);
                 break;
         }
+
+        //temp.getlevel(1) to get the thingy to do the thing when its time to do the thing.
+
+
         Intent intent = new Intent(getApplicationContext(), InputNameActivity.class);
         startActivity(intent);
         overridePendingTransition(0,0);
@@ -113,3 +117,4 @@ public class LevelActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
