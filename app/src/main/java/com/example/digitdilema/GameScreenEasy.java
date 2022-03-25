@@ -30,7 +30,6 @@ public class GameScreenEasy extends AppCompatActivity {
             ((TextView) findViewById(R.id.answer)).setText("Too High");
         } else {
             ((TextView) findViewById(R.id.answer)).setText("Correct Guess! Your new high-score is " + score);
-            score++;
         }
 
 
