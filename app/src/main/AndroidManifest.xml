@@ -9,15 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitDilema">
-        <activity
-            android:name=".MainActivity2"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".HardScoreboard"
             android:exported="false" />
@@ -28,7 +20,7 @@
             android:name=".scoreboard_menu"
             android:exported="false" />
         <activity
-            android:name=".easyscoreboard"
+            android:name=".EasyScoreboard"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

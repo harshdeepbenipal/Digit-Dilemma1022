@@ -69,8 +69,8 @@ public class ScoreboardMenuActivity extends AppCompatActivity {
         });
 
 
-        Button easybutton = (Button) findViewById(R.id.button1);
         Button medbutton = (Button) findViewById(R.id.button2);
+        Button easybutton = (Button) findViewById(R.id.button1);
         Button hardbutton = (Button) findViewById(R.id.button3);
 
 
