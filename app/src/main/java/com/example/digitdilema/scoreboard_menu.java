@@ -26,7 +26,7 @@ public class scoreboard_menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scoreboard_menu);
+        setContentView(R.layout.scoreboardmenu);
 
         // footer menu, add to every oncreate method
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView2);
