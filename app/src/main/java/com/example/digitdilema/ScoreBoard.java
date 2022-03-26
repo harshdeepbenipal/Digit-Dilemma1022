@@ -74,4 +74,13 @@ public class ScoreBoard {
             list[i].getPlayer().setRank(i);
         }
     }
+    public static ScoreBoard[] getScoreboard(int level){
+        if(level==1){
+            return sbEasy;
+        }else if(level==2){
+            return sbMedium;
+        }else{
+            return sbHard;
+        }
+    }
 }
