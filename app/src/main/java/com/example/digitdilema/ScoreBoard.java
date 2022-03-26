@@ -3,9 +3,9 @@ package com.example.digitdilema;
 public class ScoreBoard {
     private static Player player = new Player();
     private static int level;
-    private static ScoreBoard sbEasy[] = new ScoreBoard[10];
-    private static ScoreBoard sbMedium[] = new ScoreBoard[10];
-    private static ScoreBoard sbHard[] = new ScoreBoard[10];
+    private static ScoreBoard sbEasy[] = new ScoreBoard[11];
+    private static ScoreBoard sbMedium[] = new ScoreBoard[11];
+    private static ScoreBoard sbHard[] = new ScoreBoard[11];
 
     public ScoreBoard(){
         setPlayer(null);
