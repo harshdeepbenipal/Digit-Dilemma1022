@@ -30,6 +30,7 @@ public class GameScreen extends AppCompatActivity {
     int min = 1;
     int max = getMax();
     int result = 2;
+
             //getRandom(min, max);
     private int score;
     private Player player = x.getPlayer();
@@ -46,6 +47,7 @@ public class GameScreen extends AppCompatActivity {
             return 100;
         }
     }
+
     public void buttonClicked(View v) {
         //
         int guess;
@@ -54,24 +56,22 @@ public class GameScreen extends AppCompatActivity {
         guess = Integer.parseInt(guessInt.getText().toString());
         score++;
         //
-        if (guess < result){
-            ((TextView) findViewById(R.id.answer)).setText(max+"Too Low");
-        } else if (guess > result){
-            ((TextView) findViewById(R.id.answer)).setText(max+ "Too High");
+        if (guess < result) {
+            ((TextView) findViewById(R.id.answer)).setText(max + "Too Low");
+        } else if (guess > result) {
+            ((TextView) findViewById(R.id.answer)).setText(max + "Too High");
         } else {
-            if(x.checkName()!=-1){
-                if(player.getScore()<score){
+            if (x.checkName() != -1) {
+                if (player.getScore() < score) {
                     ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
                     player.setScore(score);
-                }else{
+                } else {
                     ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
                 }
-            }else{
+            } else {
                 player.setScore(score);
             }
         }
-
-
     }
 
 

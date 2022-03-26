@@ -3,6 +3,7 @@ package com.example.digitdilema;
 public class ScoreBoard {
     private static Player player = new Player();
     private static int level;
+    public static int temp = 0 ;
     private static ScoreBoard sbEasy[] = new ScoreBoard[11];
     private static ScoreBoard sbMedium[] = new ScoreBoard[11];
     private static ScoreBoard sbHard[] = new ScoreBoard[11];
@@ -11,8 +12,7 @@ public class ScoreBoard {
         setPlayer(null);
         setLevel(0);
     }
-    public ScoreBoard(Player player){
-        setPlayer(player);
+    public ScoreBoard(Player player){ setPlayer(player);
     }
     public void setPlayer(Player player) {
         this.player = player;
@@ -74,10 +74,24 @@ public class ScoreBoard {
             list[i].getPlayer().setRank(i);
         }
     }
+
+
     public static ScoreBoard[] getScoreboard(int level){
+
+        //- this code obviously doesnt run and this is just the general idea of what im trying to do.
+
+        /**sbEasy[0] = new ScoreBoard.getPlayer().getScore();
         if(level==1){
-            return sbEasy;
-        }else if(level==2){
+            for (int i = 0; i<11 ;i++){
+                if (player.getScore()>sbEasy[i]){
+                  temp = sbEasy[i-1];
+                  sbEasy[i-1]=sbEasy[i];
+                  sbEasy[i]=temp;
+                }
+            }
+
+            return sbEasy;*/
+         if(level==2){
             return sbMedium;
         }else{
             return sbHard;
