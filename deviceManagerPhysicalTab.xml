@@ -19,9 +19,10 @@
             <value value="R52MA0K9XVR" />
           </Key>
         </key>
-        <name value="Device" />
-        <target value="Android 1.0" />
-        <api value="1" />
+        <lastOnlineTime value="2022-03-26T23:03:04.729966200Z" />
+        <name value="samsung SM-T510" />
+        <target value="Android 11.0" />
+        <api value="30" />
       </PhysicalDevice>
     </physicalDevices>
   </component>
