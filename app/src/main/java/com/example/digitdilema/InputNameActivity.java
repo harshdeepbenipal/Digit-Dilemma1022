@@ -29,15 +29,15 @@ public class InputNameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inputname);
 
-    game_screen = (Button) findViewById(R.id.openGS);
-    game_screen.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            InputNameActivity.this.startActivity(new Intent(InputNameActivity.this, GameScreenEasy.class));
+        game_screen = (Button) findViewById(R.id.openGS);
+        game_screen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent intent = new Intent (InputNameActivity.this, GameScreen.class);
             setContentView(R.layout.guessingscreen);
 
-        }
-    });
+            }
+        });
 
 
 

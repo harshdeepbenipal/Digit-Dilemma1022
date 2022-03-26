@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,11 +14,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class InfoActivity extends AppCompatActivity {
+
+    ListView l;
+    String items[]  = {"Rule 1:", "Rule 2: "};
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
+      //  l = findViewById(R.id.list);
+        ArrayAdapter<String> arr;
+        arr = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item,items);
+        l.setAdapter(arr);
 
         // footer menu, add to every oncreate method
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView2);
