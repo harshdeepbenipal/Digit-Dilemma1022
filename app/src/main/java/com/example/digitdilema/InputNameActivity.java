@@ -2,7 +2,6 @@ package com.example.digitdilema;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -12,7 +11,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,26 +18,12 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-
 public class InputNameActivity extends AppCompatActivity {
-    private Button game_screen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inputname);
-
-        game_screen = (Button) findViewById(R.id.openGS);
-        game_screen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            Intent intent = new Intent (InputNameActivity.this, GameScreen.class);
-            setContentView(R.layout.guessingscreen);
-
-            }
-        });
-
-
 
         // footer menu, add to every oncreate method
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView2);
@@ -86,19 +70,22 @@ public class InputNameActivity extends AppCompatActivity {
         });
 
     }
-
+    private static ScoreBoard current;
     // enter button
     public void buttonClicked(View v){
         EditText nameView = (EditText) findViewById(R.id.name);
         String nS = nameView.getText().toString();
 
-
-
         Player player = new Player();
         player.setName(nS);
-        ScoreBoard current = LevelActivity.getCurrent();
+        current = LevelActivity.getCurrent();
         current.setPlayer(player);//Still gotta go over it
-
+        Intent intent = new Intent(getApplicationContext(), GameScreen.class);
+        startActivity(intent);
+        overridePendingTransition(0,0);
+    }
+    public static ScoreBoard getCurrent() {
+        return current;
     }
 
     // header menu
@@ -120,6 +107,4 @@ public class InputNameActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 }

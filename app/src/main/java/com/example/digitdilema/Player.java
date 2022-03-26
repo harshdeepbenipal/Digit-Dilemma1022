@@ -48,7 +48,7 @@ public class Player {
         if(change){
             return "Congratulations! New high score of " + score + "!";
         }else{
-            return "";
+            return "Better luck next time!";
         }
     }
 }

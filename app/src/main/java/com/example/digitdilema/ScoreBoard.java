@@ -17,7 +17,7 @@ public class ScoreBoard {
     public void setPlayer(Player player) {
         this.player = player;
     }
-    public Player getPlayer() {
+    public static Player getPlayer() {
         return player;
     }
     public void setLevel(int level) {
@@ -40,7 +40,7 @@ public class ScoreBoard {
                     index = i;
                 }
             }
-        }else{
+        }else if(level==3){
             for(int i = 0; i<11;i++){
                 if(sbHard[i].getPlayer().getName().equals(player.getName())){
                     index = i;

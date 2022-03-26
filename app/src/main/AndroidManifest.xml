@@ -36,7 +36,6 @@
         <activity android:name=".InputNameActivity" />
         <activity android:name=".LevelActivity" />
         <activity android:name=".GameScreen"/>
-        <activity android:name=".GameScreenEasy"/>
     </application>
 
 </manifest>

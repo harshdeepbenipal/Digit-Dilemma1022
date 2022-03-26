@@ -6,24 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/openGS"
-        android:layout_width="165dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="44dp"
-        android:onClick="buttonClicked"
-        android:text="Proceed"
-        app:layout_constraintEnd_toEndOf="@+id/enter"
-        app:layout_constraintStart_toStartOf="@+id/enter"
-        app:layout_constraintTop_toBottomOf="@+id/enter" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="208dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="ENTER YOUR NAME2"
+        android:text="ENTER YOUR NAME"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
