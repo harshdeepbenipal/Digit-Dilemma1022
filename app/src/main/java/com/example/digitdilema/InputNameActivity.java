@@ -78,6 +78,7 @@ public class InputNameActivity extends AppCompatActivity {
 
         Player player = new Player();
         player.setName(nS);
+        player.getDate();
         current = LevelActivity.getCurrent();
         current.setPlayer(player);//Still gotta go over it
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
