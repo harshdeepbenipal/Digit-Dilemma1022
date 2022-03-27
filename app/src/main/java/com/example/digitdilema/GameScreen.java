@@ -13,18 +13,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class GameScreen extends AppCompatActivity {
     int max = getMax();
-    int l;
 
 
     public int getMax(){
         if(x.getLevel()==1){
-            l = 0;
             return 20;
         }else if(x.getLevel()==2){
-            l = 1;
             return 50;
         }else{
-            l=2;
             return 100;
         }
     }
@@ -34,11 +30,11 @@ public class GameScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guessingscreen);
         TextView level = (TextView) findViewById(R.id.displayLevel);
-        if(l == 0){
+        if(x.getLevel() == 1){//don't need the l variable
             level.setText("Level: Easy");
-        }else if(l == 1){
+        }else if(x.getLevel() == 2){
             level.setText("Level: Medium");
-        }else if(l == 2){
+        }else if(x.getLevel() == 3){
             level.setText("Level: Hard");
         }
     }
