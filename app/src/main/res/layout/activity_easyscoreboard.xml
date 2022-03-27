@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:stretchColumns="0,1,2,3"
+    android:id="@+id/easy_scoreboard"
     app:layout_anchorGravity="center">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tableRow2"
@@ -612,13 +614,18 @@
 
     </TableRow>
 
+    <!--  Footer menu, copy to each layout file  -->
+
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"> </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
         android:layout_width="match_parent"

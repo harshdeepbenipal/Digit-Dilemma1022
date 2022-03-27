@@ -3,11 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Buder/AndroidStudioProjects/Digit-Dilemma1022 test/app/src/main/res/layout/activity_easyscoreboard.xml" value="0.2537037037037037" />
+        <entry key="..\:/Users/Buder/AndroidStudioProjects/Digit-Dilemma1022 test/app/src/main/res/layout/activity_info.xml" value="0.2537037037037037" />
+        <entry key="..\:/Users/Buder/AndroidStudioProjects/Digit-Dilemma1022 test/app/src/main/res/layout/guessingscreen.xml" value="0.2537037037037037" />
+        <entry key="..\:/Users/Buder/AndroidStudioProjects/Digit-Dilemma1022 test/app/src/main/res/layout/hardscoreboard.xml" value="0.2537037037037037" />
+        <entry key="..\:/Users/Buder/AndroidStudioProjects/Digit-Dilemma1022 test/app/src/main/res/layout/inputname.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Buder/AndroidStudioProjects/Digit-Dilemma1022 test/app/src/main/res/layout/levelmenu.xml" value="0.1" />
+        <entry key="..\:/Users/Buder/AndroidStudioProjects/Digit-Dilemma1022 test/app/src/main/res/layout/mediumscoreboard.xml" value="0.2537037037037037" />
+        <entry key="..\:/Users/Buder/AndroidStudioProjects/Digit-Dilemma1022 test/app/src/main/res/layout/scoreboardmenu.xml" value="0.1" />
         <entry key="..\:/Users/Buder/AndroidStudioProjects/DigitDilema/app/src/main/res/layout/activity_main.xml" value="0.3251282051282051" />
         <entry key="..\:/Users/Buder/AndroidStudioProjects/DigitDilema/app/src/main/res/layout/header_layout.xml" value="0.3302083333333333" />
         <entry key="..\:/Users/Buder/AndroidStudioProjects/DigitDilema/app/src/main/res/menu/footer.xml" value="0.20555555555555555" />
         <entry key="..\:/Users/Buder/AndroidStudioProjects/DigitDilema/app/src/main/res/menu/header.xml" value="0.3251282051282051" />
-        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(10)/app/src/main/res/layout/guessingscreen.xml" value="0.5" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(1)/app/src/main/res/layout/guessingscreen.xml" value="0.25" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/drawable/home.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/drawable/info.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/activity_easyscoreboard.xml" value="0.3625" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/activity_info.xml" value="0.33" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/gamescreen.xml" value="0.3625" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/guessingscreen.xml" value="0.3625" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/hardscoreboard.xml" value="0.3625" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/inputname.xml" value="0.4198473282442748" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/levelmenu.xml" value="0.3625" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/list_row.xml" value="0.353713768115942" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/mediumscoreboard.xml" value="0.3625" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/scoreboardmenu.xml" value="0.3625" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/layout/test.xml" value="0.1527777777777778" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/menu/footer.xml" value="0.33" />
+        <entry key="..\:/Users/dhind/AndroidStudioProjects/Digit-Dilemma1022(7)/app/src/main/res/menu/header.xml" value="0.33" />
         <entry key="..\:/Users/harsh/Digit-Dilemma1022/app/src/main/res/layout/activity_info.xml" value="0.13125" />
         <entry key="..\:/Users/harsh/Digit-Dilemma1022/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/harsh/Digit-Dilemma1022/app/src/main/res/layout/gamescreen.xml" value="0.14666666666666667" />
@@ -21,10 +45,7 @@
         <entry key="..\:/Users/kwazi/AndroidStudioProjects/Digit-Dilemma1022/app/src/main/res/layout/activity_main.xml" value="0.17135416666666667" />
         <entry key="..\:/Users/kwazi/AndroidStudioProjects/Digit-Dilemma1022/app/src/main/res/layout/activity_scoreboard_menu.xml" value="0.15572916666666667" />
         <entry key="..\:/Users/kwazi/AndroidStudioProjects/Digit-Dilemma1022/app/src/main/res/layout/easyscoreboard.xml" value="0.15989583333333332" />
-        <entry key="..\:/Users/kwazi/AndroidStudioProjects/Digit-Dilemma1022/app/src/main/res/layout/gamescreen.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/kwazi/AndroidStudioProjects/Digit-Dilemma1022/app/src/main/res/layout/guessingscreen.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/kwazi/AndroidStudioProjects/Digit-Dilemma1022/app/src/main/res/layout/hardscoreboard.xml" value="0.1" />
-        <entry key="..\:/Users/kwazi/AndroidStudioProjects/Digit-Dilemma1022/app/src/main/res/layout/inputname.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/kwazi/AndroidStudioProjects/Digit-Dilemma1022/app/src/main/res/layout/mediumscoreboard.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/kwazi/AndroidStudioProjects/Digit-Dilemma1022/app/src/main/res/layout/scoreboardmenu.xml" value="0.14666666666666667" />
       </map>

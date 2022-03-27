@@ -40,12 +40,7 @@ public class scoreboard_menu extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.help:
-                        /*Intent intent1 = new Intent(getApplicationContext(), InfoActivity.class);
-                        startActivity(intent1);
-                        overridePendingTransition(0,0);
-                        return true;*/
-
-                        ConstraintLayout layout = findViewById(R.id.levelMenu);
+                        ConstraintLayout layout = findViewById(R.id.scoreboardMenu);
                         // inflate the layout of the popup window
                         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
                         View popupView = inflater.inflate(R.layout.activity_info, null);

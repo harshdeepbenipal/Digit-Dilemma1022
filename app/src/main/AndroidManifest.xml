@@ -31,7 +31,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InfoActivity" />
         <activity android:name=".ScoreboardMenuActivity" />
         <activity android:name=".InputNameActivity" />
         <activity android:name=".LevelActivity" />
