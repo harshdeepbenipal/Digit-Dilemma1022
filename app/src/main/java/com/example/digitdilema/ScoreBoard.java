@@ -3,17 +3,17 @@ package com.example.digitdilema;
 public class ScoreBoard {
     private static Player player = new Player();
     private static int level;
-    public static int temp = 0 ;
-    private static ScoreBoard sbEasy[] = new ScoreBoard[11];
-    private static ScoreBoard sbMedium[] = new ScoreBoard[11];
-    private static ScoreBoard sbHard[] = new ScoreBoard[11];
+    private static ScoreBoard sbEasy[] = new ScoreBoard[10];
+    private static ScoreBoard sbMedium[] = new ScoreBoard[10];
+    private static ScoreBoard sbHard[] = new ScoreBoard[10];
 
     public ScoreBoard(){
-        setPlayer(null);
         setLevel(0);
+        player.setDate();
     }
-    public ScoreBoard(Player player){ setPlayer(player);
-    }
+    /*public ScoreBoard(Player player){
+        setPlayer(player);
+    }*/
     public void setPlayer(Player player) {
         this.player = player;
     }
@@ -22,6 +22,7 @@ public class ScoreBoard {
     }
     public void setLevel(int level) {
         this.level = level;
+        player.setLevel(level);
     }
     public int getLevel() {
         return level;
@@ -29,19 +30,19 @@ public class ScoreBoard {
     public static int checkName(){
         int index = -1;
         if(level==1){
-            for(int i = 0; i<11;i++){
+            for(int i = 0; i<10;i++){
                 if(sbEasy[i].getPlayer().getName().equals(player.getName())){
                     index = i;
                 }
             }
         }else if(level==2){
-            for(int i = 0; i<11;i++){
+            for(int i = 0; i<10;i++){
                 if(sbMedium[i].getPlayer().getName().equals(player.getName())){
                     index = i;
                 }
             }
         }else if(level==3){
-            for(int i = 0; i<11;i++){
+            for(int i = 0; i<10;i++){
                 if(sbHard[i].getPlayer().getName().equals(player.getName())){
                     index = i;
                 }
@@ -71,27 +72,13 @@ public class ScoreBoard {
             }
         }
         for(int i = 0;i< list.length;i++){
-            list[i].getPlayer().setRank(i);
+            list[i].getPlayer();
         }
     }
-
-
     public static ScoreBoard[] getScoreboard(int level){
-
-        //- this code obviously doesnt run and this is just the general idea of what im trying to do.
-
-        /**sbEasy[0] = new ScoreBoard.getPlayer().getScore();
         if(level==1){
-            for (int i = 0; i<11 ;i++){
-                if (player.getScore()>sbEasy[i]){
-                  temp = sbEasy[i-1];
-                  sbEasy[i-1]=sbEasy[i];
-                  sbEasy[i]=temp;
-                }
-            }
-
-            return sbEasy;*/
-         if(level==2){
+            return sbEasy;
+        }else if(level==2){
             return sbMedium;
         }else{
             return sbHard;
