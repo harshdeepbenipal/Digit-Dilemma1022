@@ -13,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -59,8 +60,20 @@ public class EasyScoreboard extends AppCompatActivity {
                 return false;
             }
         });
-
-
+        String[] x = new String[10];
+        for(int i = 0;i<x.length;i++){
+            x[i] = ScoreBoard.getScoreboard(1)[i].getPlayer().getDate();//adds the date to the array
+        }
+        ((TextView) findViewById(R.id.date1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.date2)).setText(x[1]);
+        ((TextView) findViewById(R.id.date2)).setText(x[2]);
+        ((TextView) findViewById(R.id.date2)).setText(x[3]);
+        ((TextView) findViewById(R.id.date2)).setText(x[4]);
+        ((TextView) findViewById(R.id.date2)).setText(x[5]);
+        ((TextView) findViewById(R.id.date2)).setText(x[6]);
+        ((TextView) findViewById(R.id.date2)).setText(x[7]);
+        ((TextView) findViewById(R.id.date2)).setText(x[8]);
+        ((TextView) findViewById(R.id.date2)).setText(x[9]);
 
     }
 

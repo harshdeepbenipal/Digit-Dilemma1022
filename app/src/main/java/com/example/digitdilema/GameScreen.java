@@ -29,8 +29,7 @@ public class GameScreen extends AppCompatActivity {
     private static ScoreBoard x = InputNameActivity.getCurrent();
     int min = 1;
     int max = getMax();
-    int result = 2;
-            //getRandom(min, max);
+    int result = getRandom(min, max);
     private int score;
     private Player player = x.getPlayer();
 

@@ -115,6 +115,7 @@
         >
 
         <TextView
+            android:id="@+id/date1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -164,6 +165,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/date2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -212,6 +214,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/date3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -260,6 +263,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/date4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -307,6 +311,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/date5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -354,6 +359,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/date6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -401,6 +407,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/date7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -448,6 +455,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/date8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -496,6 +504,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/date9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -543,6 +552,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/date10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
