@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -18,6 +19,9 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class EasyScoreboard extends AppCompatActivity {
+    private static ScoreBoard x = InputNameActivity.getCurrent();
+    private Player player = x.getPlayer();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +79,16 @@ public class EasyScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.date2)).setText(x[8]);
         ((TextView) findViewById(R.id.date2)).setText(x[9]);
 
+        ((TextView) findViewById(R.id.d2)).setText(x.getPlayer().getDate());
+
+        ((TextView) findViewById(R.id.name1)).setText(x.getPlayer().getName());
+
     }
+
+
+
+
+
+
 
 }
