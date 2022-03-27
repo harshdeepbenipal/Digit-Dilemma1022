@@ -8,7 +8,6 @@ public class ScoreBoard {
     private static ScoreBoard sbHard[] = new ScoreBoard[10];
 
     public ScoreBoard(){
-        setPlayer(null);
         setLevel(0);
         player.setDate();
     }
