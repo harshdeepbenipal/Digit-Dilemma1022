@@ -50,6 +50,13 @@ public class GameScreen extends AppCompatActivity {
 
     public void buttonClicked(View v) {
         //
+        if(x.getLevel()==1){
+            ((TextView) findViewById(R.id.displayLevel)).setText("Level: Easy");
+        }else if(x.getLevel()==2){
+            ((TextView) findViewById(R.id.displayLevel)).setText("Level: Medium");
+        }else{
+            ((TextView) findViewById(R.id.displayLevel)).setText("Level: Hard");
+        }
         int guess;
         //
         EditText guessInt = (EditText) findViewById(R.id.guessInt);
