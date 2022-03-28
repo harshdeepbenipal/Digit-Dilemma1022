@@ -21,6 +21,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.logging.Level;
+
 
 public class GameScreen extends AppCompatActivity {
     int max = getMax();
@@ -104,6 +106,7 @@ public class GameScreen extends AppCompatActivity {
 
 
 
+
     public void buttonClicked(View v) {
 
         int guess;
@@ -114,8 +117,10 @@ public class GameScreen extends AppCompatActivity {
         //
         if (guess < result) {
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too Low");
-        } else if (guess > result) {
+        } else if (guess > result && guess < max) {
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too High");
+        } else if (guess > max){
+            ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between 1 and " + max);
         } else {
             if (x.checkName() != -1) {
                 if (player.getScore() < score) {
@@ -129,12 +134,19 @@ public class GameScreen extends AppCompatActivity {
             }
         }
     }
+
     public void resetGame(View v){
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
         startActivity(intent);
         overridePendingTransition(0,0);
 
     }
+    public void changeLevel(View v){
+        Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0,0);
+    }
+
 
     // header menu
     @Override
