@@ -70,19 +70,19 @@ public class EasyScoreboard extends AppCompatActivity {
             }
         });
         String[] x = new String[10];
-        for(int i = 0;i<x.length;i++){
-            x[i] = ScoreBoard.getScoreboard(1)[i].getPlayer().getDate();//adds the date to the array
+        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
+            x[i] = ScoreBoard.getScoreboard(1)[i].getName();//adds the name
         }
-        ((TextView) findViewById(R.id.d1)).setText(x[0]);//should work in theory
-        ((TextView) findViewById(R.id.d2)).setText(x[1]);
-        ((TextView) findViewById(R.id.d3)).setText(x[2]);
-        ((TextView) findViewById(R.id.d4)).setText(x[3]);
-        ((TextView) findViewById(R.id.d5)).setText(x[4]);
-        ((TextView) findViewById(R.id.d6)).setText(x[5]);
-        ((TextView) findViewById(R.id.d7)).setText(x[6]);
-        ((TextView) findViewById(R.id.d8)).setText(x[7]);
-        ((TextView) findViewById(R.id.d9)).setText(x[8]);
-        ((TextView) findViewById(R.id.d10)).setText(x[9]);
+        ((TextView) findViewById(R.id.name1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.name2)).setText(x[1]);
+        ((TextView) findViewById(R.id.name3)).setText(x[2]);
+        ((TextView) findViewById(R.id.name4)).setText(x[3]);
+        ((TextView) findViewById(R.id.name5)).setText(x[4]);
+        ((TextView) findViewById(R.id.name6)).setText(x[5]);
+        ((TextView) findViewById(R.id.name7)).setText(x[6]);
+        ((TextView) findViewById(R.id.name8)).setText(x[7]);
+        ((TextView) findViewById(R.id.name9)).setText(x[8]);
+        ((TextView) findViewById(R.id.name10)).setText(x[9]);
 
         //((TextView) findViewById(R.id.d2)).setText(x.getPlayer().getDate());
 

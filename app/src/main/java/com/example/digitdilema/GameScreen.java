@@ -25,7 +25,7 @@ import java.util.logging.Level;
 
 
 public class GameScreen extends AppCompatActivity {
-    int max = getMax();
+    private final int max = getMax();
 
 
     public int getMax(){
@@ -50,6 +50,9 @@ public class GameScreen extends AppCompatActivity {
         }else if(x.getLevel() == 3){
             level.setText("Level: Hard");
         }
+        ((TextView) findViewById(R.id.displayName)).setText("Name: "+player.getName());
+        ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+highScore);
+        ((TextView) findViewById(R.id.displayScore)).setText("Score: "+score);
 
         // footer menu, add to every oncreate method
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView2);
@@ -94,12 +97,13 @@ public class GameScreen extends AppCompatActivity {
         });
     }
 
-    private static ScoreBoard x = InputNameActivity.getCurrent();
-    int min = 1;
-    int result = getRandom(min,max);
+    private static Player x = InputNameActivity.getCurrent();
+    //int min = 1;
+    int result = getRandom(1,max);
 
     private int score;
-    private Player player = x.getPlayer();
+    private int highScore = 0;
+    private Player player = x;
     public static int getRandom(int min, int max){
         return (int) ((Math.random() * (max - min)) + min);
     }
@@ -113,26 +117,29 @@ public class GameScreen extends AppCompatActivity {
         //
         EditText guessInt = (EditText) findViewById(R.id.guessInt);
         guess = Integer.parseInt(guessInt.getText().toString());
-        score++;
+        ScoreBoard z = new ScoreBoard();
+        z.addPlayer(x);
         //
         if (guess < result) {
+            score++;
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too Low");
-        } else if (guess > result && guess < max) {
+        } else if (guess > result && guess <= max) {
+            score++;
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too High");
         } else if (guess > max){
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between 1 and " + max);
         } else {
-            if (x.checkName() != -1) {
-                if (player.getScore() < score) {
-                    ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
-                    player.setScore(score);
-                } else {
-                    ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
+            ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
+            if (z.checkName() != -1) {
+                highScore = player.getScore();
+                z.setPlayer(player);
+                if (highScore < score) {
+                    z.replacePlayer();
                 }
-            } else {
-                player.setScore(score);
             }
         }
+        ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+highScore);
+        ((TextView) findViewById(R.id.displayScore)).setText("Score: "+score);
     }
 
     public void resetGame(View v){

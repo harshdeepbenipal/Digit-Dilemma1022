@@ -10,6 +10,11 @@ public class Player {
     private String date;
    // public String rank; rank instance variable for the order of players might change in the scoreboard class when highscore changes
 
+    public Player(){
+        setName("");
+        setScore(0);
+        setLevel(0);
+    }
     public void setName(String name){
         this.name = name;
     }
@@ -42,7 +47,6 @@ public class Player {
     public String getRank() {
         return rank;
     }*/
-
     public String getInformation(boolean change){
         if(change){
             return "Congratulations! New high score of " + score + "!";

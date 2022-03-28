@@ -64,7 +64,7 @@ public class LevelActivity extends AppCompatActivity {
             }
         });
     }
-    public static ScoreBoard temp = new ScoreBoard();
+    public static Player temp = new Player();
 
     public void buttonClicked(View v){
         switch (v.getId()){
@@ -88,8 +88,8 @@ public class LevelActivity extends AppCompatActivity {
 
     }
 
-    public static ScoreBoard getCurrent() {
-        return temp;
+    public static int getCurrent() {
+        return temp.getLevel();
     }
 
     // header menu

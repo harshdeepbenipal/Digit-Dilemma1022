@@ -65,7 +65,7 @@ public class InputNameActivity extends AppCompatActivity {
         });
 
     }
-    private static ScoreBoard current;
+    private static Player current;
     // enter button
     public void buttonClicked(View v){
         EditText nameView = (EditText) findViewById(R.id.name);
@@ -74,13 +74,14 @@ public class InputNameActivity extends AppCompatActivity {
         Player player = new Player();
         player.setName(nS);
         player.getDate();
-        current = LevelActivity.getCurrent();
-        current.setPlayer(player);//Still gotta go over it
+        player.setLevel(LevelActivity.getCurrent());
+        current = player;
+        //current.setPlayer(player);//Still gotta go over it
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
         startActivity(intent);
         overridePendingTransition(0,0);
     }
-    public static ScoreBoard getCurrent() {
+    public static Player getCurrent() {
         return current;
     }
 
