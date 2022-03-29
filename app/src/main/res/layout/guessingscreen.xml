@@ -62,6 +62,7 @@
         android:fontFamily="serif-monospace"
         android:onClick="buttonClicked"
         android:text="CHECK MY GUESS"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/guessInt"

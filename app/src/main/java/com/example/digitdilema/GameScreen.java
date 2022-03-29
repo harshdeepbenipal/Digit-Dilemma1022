@@ -122,8 +122,10 @@ public class GameScreen extends AppCompatActivity {
         z.addPlayer(x);
         //
         if (guess < result) {
+            score++;
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too Low");
         } else if (guess > result && guess <= max) {
+            score++;
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too High");
         } else if (guess > max){
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between 1 and " + max);
@@ -133,6 +135,7 @@ public class GameScreen extends AppCompatActivity {
             ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
             //z.setPlayer(player);
             score++;
+            player.setScore(score);
             ScoreBoard.addPlayer(player);
             if (z.checkName() != -1) {
                 highScore = player.getScore();
