@@ -5,23 +5,24 @@
         <key>
           <Key>
             <type value="SERIAL_NUMBER" />
+            <value value="R52MA0K9XVR" />
+          </Key>
+        </key>
+        <lastOnlineTime value="2022-03-29T15:25:33.600853300Z" />
+        <name value="samsung SM-T510" />
+        <target value="Android 11.0" />
+        <api value="30" />
+      </PhysicalDevice>
+      <PhysicalDevice>
+        <key>
+          <Key>
+            <type value="SERIAL_NUMBER" />
             <value value="R9YR814XPJX" />
           </Key>
         </key>
         <name value="Device" />
         <target value="Android 1.0" />
         <api value="1" />
-      </PhysicalDevice>
-      <PhysicalDevice>
-        <key>
-          <Key>
-            <type value="SERIAL_NUMBER" />
-            <value value="R52MA0K9XVR" />
-          </Key>
-        </key>
-        <name value="samsung SM-T510" />
-        <target value="Android 11.0" />
-        <api value="30" />
       </PhysicalDevice>
     </physicalDevices>
   </component>
