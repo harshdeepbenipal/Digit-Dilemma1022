@@ -26,19 +26,17 @@ import java.util.logging.Level;
 
 
 public class GameScreen extends AppCompatActivity {
-    private int max = getMax();
-    private static Player x = new Player();
+    private final int max = getMax();
 
 
     public int getMax(){
-        if(InputNameActivity.getCurrent().getLevel()==1){
+        if(x.getLevel()==1){
             return 20;
-        }else if(InputNameActivity.getCurrent().getLevel()==2){
+        }else if(x.getLevel()==2){
             return 50;
-        }else if(InputNameActivity.getCurrent().getLevel()==3){
+        }else{
             return 100;
         }
-        return -1;
     }
 
     @Override
@@ -46,9 +44,6 @@ public class GameScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guessingscreen);
         TextView level = (TextView) findViewById(R.id.displayLevel);
-        x.setLevel(InputNameActivity.getCurrent().getLevel());
-        x.setDate(InputNameActivity.getCurrent().getDate());
-        x.setName(InputNameActivity.getCurrent().getName());
         if(x.getLevel() == 1){//don't need the l variable
             level.setText("Level: Easy");
         }else if(x.getLevel() == 2){
@@ -56,7 +51,7 @@ public class GameScreen extends AppCompatActivity {
         }else if(x.getLevel() == 3){
             level.setText("Level: Hard");
         }
-        ((TextView) findViewById(R.id.displayName)).setText("Name: "+player.getName());
+        ((TextView) findViewById(R.id.displayName)).setText("Name: " + x.getName());
         ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+highScore);
         ((TextView) findViewById(R.id.displayScore)).setText("Score: "+score);
 
@@ -103,15 +98,20 @@ public class GameScreen extends AppCompatActivity {
         });
     }
 
+    private static Player x;
     //int min = 1;
     int result = getRandom(1,max);
 
     private int score;
     private int highScore = 0;
-    private Player player = x;
+    //private Player player = x; this variable is not needed
     public static int getRandom(int min, int max){
         return (int) ((Math.random() * (max - min)) + min);
     }
+
+    public static void setX(Player y){
+        x = y;
+    } // sets the player x
 
 
 
@@ -139,10 +139,10 @@ public class GameScreen extends AppCompatActivity {
             ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
             //z.setPlayer(player);
             score++;
-            player.setScore(score);
-            ScoreBoard.addPlayer(player);
+            x.setScore(score);
+            ScoreBoard.addPlayer(x);
             if (z.checkName() != -1) {
-                highScore = player.getScore();
+                highScore = x.getScore();
                 //z.setPlayer(player);
                 //ScoreBoard.addPlayer(player);
                 if (highScore < score) {
@@ -158,7 +158,6 @@ public class GameScreen extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
         startActivity(intent);//LEVEL DOESN'T SHOW IDKY
         overridePendingTransition(0,0);
-        x.clearPlayer(1);
 
     }
     public void changeLevel(View v){

@@ -16,10 +16,10 @@ public class Player {
         setLevel(0);
     }
     public Player(Player player){
-        setName(player.getName());
-        setScore(player.getScore());
-        setLevel(player.getLevel());
-        setDate(player.getDate());
+        this.name = player.name;
+        this.score = player.score;
+        this.level = player.level;
+        this.date = player.date;
     }
     public void setName(String newName){
         name = newName;

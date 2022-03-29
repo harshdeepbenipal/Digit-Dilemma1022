@@ -65,23 +65,28 @@ public class InputNameActivity extends AppCompatActivity {
         });
 
     }
-    private static Player current = new Player();
+    private static Player current;
     // enter button
     public void buttonClicked(View v){
         EditText nameView = (EditText) findViewById(R.id.name);
         String nS = nameView.getText().toString();
 
-        current.setName(nS);
-        current.setDate();
-        current.setLevel(LevelActivity.getCurrent());
-        System.out.println(current.getLevel()+"OMG IM GONNA DIE");
+        Player player = new Player();
+        player.setName(nS);
+        player.getDate();
+        player.setLevel(LevelActivity.getCurrent());
+        current = player;
+        //current.setPlayer(player);//Still gotta go over it
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
+        GameScreen.setX(current); // updates the player object in game screen
         startActivity(intent);
         overridePendingTransition(0,0);
     }
-    public static Player getCurrent() {
+
+    /*public static Player getCurrent() {
         return current;
-    }
+    }*/
+
 
     // header menu
     @Override

@@ -69,4 +69,26 @@ public class MediumScoreboard extends AppCompatActivity {
 
 
     }
+    // header menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.header, menu);
+        return true;
+    }
+
+    //header menu items
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.scoreboard:
+                Intent intent = new Intent(getApplicationContext(), ScoreboardMenuActivity.class);
+                startActivity(intent);
+                overridePendingTransition(0,0);
+                break;
+
+
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
