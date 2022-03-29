@@ -27,7 +27,7 @@ import java.util.logging.Level;
 
 public class GameScreen extends AppCompatActivity {
     private int max = getMax();
-    private static Player x = InputNameActivity.getCurrent();
+    private static Player x = new Player();
 
 
     public int getMax(){
@@ -46,6 +46,9 @@ public class GameScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guessingscreen);
         TextView level = (TextView) findViewById(R.id.displayLevel);
+        x.setLevel(InputNameActivity.getCurrent().getLevel());
+        x.setDate(InputNameActivity.getCurrent().getDate());
+        x.setName(InputNameActivity.getCurrent().getName());
         if(x.getLevel() == 1){//don't need the l variable
             level.setText("Level: Easy");
         }else if(x.getLevel() == 2){
