@@ -13,7 +13,7 @@ public class ScoreBoard {
     }
 
     public static void setPlayer(Player player1) {
-        player = new Player(player1);
+        player = new Player(player1);//i don't think this does anything
         player = player1;
     }
     public static Player getPlayer() {
@@ -94,11 +94,11 @@ public class ScoreBoard {
         }
     }
     public static int getIndex(Player[] a, String x){//checking the
-        System.out.println("BONJOUR");
+        //System.out.println("BONJOUR"); Testing lol
         for(int i = 0;i<10;i++){
             if(a[i]!=null){
                 if(a[i].getName().equals(x)){
-                    System.out.println("HOLA");
+                    //System.out.println("HOLA"); testing
                     return i;
                 }
             }
