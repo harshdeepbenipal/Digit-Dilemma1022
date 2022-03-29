@@ -2,7 +2,7 @@ package com.example.digitdilema;
 
 public class ScoreBoard {
     private static Player player = new Player();
-    private static int level;
+   // private static int level;
     private static Player sbEasy[] = new Player[10];
     private static Player sbMedium[] = new Player[10];
     private static Player sbHard[] = new Player[10];
@@ -13,37 +13,36 @@ public class ScoreBoard {
     }
 
     public static void setPlayer(Player player1) {
-        player = new Player(player1);//i don't think this does anything
+        //player = new Player(player1);//i don't think this does anything
         player = player1;
     }
     public static Player getPlayer() {
         return player;
     }
     public void setLevel(int level) {
-        this.level = level;
         player.setLevel(level);
     }
-    public int getLevel() {
-        return level;
+    public static int getLevel() {
+        return player.getLevel();
     }
     public static int checkName(){
         int index = -1;
-        if(level==1){
+        if(getLevel()==1){
             index = getIndex(sbEasy,player.getName());
-        }else if(level==2){
+        }else if(getLevel()==2){
             index = getIndex(sbMedium,player.getName());
-        }else if(level==3){
+        }else if(getLevel()==3){
             index = getIndex(sbHard,player.getName());
         }
         return index;
     }
     public static void replacePlayer(){//as long as there's a index where the name is present replace the previous player with present if score is higher
         if(checkName()>-1) {
-            if (level == 1 && sbEasy[checkName()].getScore() > player.getScore()) {
+            if (getLevel() == 1 && sbEasy[checkName()].getScore() > player.getScore()) {
                 sbEasy[checkName()] = player;
-            } else if (level == 2 && sbMedium[checkName()].getScore() > player.getScore()) {
+            } else if (getLevel() == 2 && sbMedium[checkName()].getScore() > player.getScore()) {
                 sbMedium[checkName()] = player;
-            } else if (level == 3 && sbHard[checkName()].getScore() > player.getScore()) {
+            } else if (getLevel() == 3 && sbHard[checkName()].getScore() > player.getScore()) {
                 sbHard[checkName()] = player;
             }
         }
@@ -78,29 +77,30 @@ public class ScoreBoard {
     }
     public static void addPlayer(Player player){
         setPlayer(player);
-        if(checkName()==-1){
-            int x = getIndex(sbEasy,"");
-            if(level==1&&x!=-1){
+        //if(checkName()==-1){
+            int x = getIndex(sbMedium,null);
+            if(getLevel()==1){
                 sbEasy[x] = player;
             }
-            x = getIndex(sbMedium,"");
-            if(level==2&&x!=-1){
+            x = getIndex(sbMedium,null);
+            if(getLevel()==2&&x!=-1){
                 sbMedium[x] = player;
             }
-            x = getIndex(sbHard,"");
-            if(level==3&&x!=-1){
+            x = getIndex(sbHard,null);
+            if(getLevel()==3&&x!=-1){
                 sbHard[x] = player;
             }
-        }
+        //}
     }
     public static int getIndex(Player[] a, String x){//checking the
-        //System.out.println("BONJOUR"); Testing lol
+        //System.out.println("BONJOUR"); //Testing lol
         for(int i = 0;i<10;i++){
-            if(a[i]!=null){
-                if(a[i].getName().equals(x)){
-                    //System.out.println("HOLA"); testing
+            if(a[i]==null) {
+                //System.out.println("HOLA"); //testing
+                return i;
+            }else if (a[i].getName().equals(x)){
+                    //System.out.println("HELLO"); //testing
                     return i;
-                }
             }
         }
         /*for(int i = 0;i<10;i++){

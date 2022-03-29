@@ -148,7 +148,7 @@ public class GameScreen extends AppCompatActivity {
 
     public void resetGame(View v){
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
-        startActivity(intent);
+        startActivity(intent);//LEVEL DOESN'T SHOW IDKY
         overridePendingTransition(0,0);
 
     }

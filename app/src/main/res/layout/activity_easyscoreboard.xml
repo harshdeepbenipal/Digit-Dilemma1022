@@ -442,7 +442,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
-            android:id="@+id/score7"
+            android:id="@+id/escore7"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
