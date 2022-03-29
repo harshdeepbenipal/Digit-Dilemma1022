@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/levelMenu"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/levelMenu"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="#305691">
 
 
     <TextView
@@ -13,9 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="serif-monospace"
         android:text="SELECT LEVEL"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,27 +27,31 @@
         android:id="@+id/easy"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed"
-        android:text="EASY 1-20"
+        android:backgroundTint="#0F2850"
+        android:fontFamily="serif-monospace"
         android:onClick="buttonClicked"
+        android:text="EASY 1-20"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/select_menu"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/select_menu"
+        app:layout_constraintTop_toBottomOf="@id/select_menu"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.387"
-        app:layout_constraintTop_toBottomOf= "@id/select_menu"/>
+        app:layout_constraintVertical_bias="0.387" />
 
     <Button
         android:id="@+id/medium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="MEDIUM 1-50"
+        android:backgroundTint="#0F2850"
+        android:fontFamily="serif-monospace"
         android:onClick="buttonClicked"
+        android:text="MEDIUM 1-50"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/easy"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/easy"
@@ -56,10 +62,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:fontFamily="sans-serif-condensed"
+        android:backgroundTint="#0F2850"
+        android:fontFamily="serif-monospace"
         android:onClick="buttonClicked"
         android:text="HARD 1-100"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/medium"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/medium"
@@ -67,7 +75,7 @@
 
     <!--  Footer menu, copy to each layout file  -->
 
-    <FrameLayout
+    <!--<FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
@@ -75,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </FrameLayout>
+    </FrameLayout>-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"

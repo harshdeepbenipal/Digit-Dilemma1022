@@ -42,9 +42,12 @@
             android:layout_height="75dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="12dp"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/easy_scoreboard"
+            android:textColor="#D3000000"
             android:textSize="35sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -63,11 +66,12 @@
         >
 
         <TextView
-            android:layout_width="105dp"
+            android:layout_width="108dp"
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/date"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -79,6 +83,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/name"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -90,17 +95,19 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/score"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="105dp"
+            android:layout_width="74dp"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/rank"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -123,8 +130,11 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -134,6 +144,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold" />
@@ -145,6 +156,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold" />
@@ -155,6 +167,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_1"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -175,8 +188,10 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/name2"
@@ -185,6 +200,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -195,6 +211,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold" />
@@ -206,6 +223,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_2"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -227,8 +245,10 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
 
 
         <TextView
@@ -238,6 +258,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -248,6 +269,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -257,6 +279,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_3"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -278,8 +301,10 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/name4"
@@ -288,6 +313,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -298,6 +324,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -307,6 +334,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_4"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -328,8 +356,10 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/name5"
@@ -338,6 +368,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -348,6 +379,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -357,6 +389,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_5"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -378,8 +411,10 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/name6"
@@ -388,6 +423,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -398,6 +434,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -407,6 +444,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_6"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -428,8 +466,10 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/name7"
@@ -438,6 +478,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -448,6 +489,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -457,6 +499,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_7"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -478,8 +521,10 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/name8"
@@ -489,6 +534,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -499,6 +545,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -508,6 +555,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_8"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -529,8 +577,10 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/name9"
@@ -539,8 +589,10 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/escore9"
@@ -549,8 +601,10 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -558,6 +612,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_9"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -579,8 +634,10 @@
             android:layout_column="0"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/name10"
@@ -589,6 +646,7 @@
             android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -599,6 +657,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -608,6 +667,7 @@
             android:layout_column="2"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
+            android:fontFamily="serif-monospace"
             android:gravity="center"
             android:text="@string/_10"
             android:textAppearance="?android:attr/textAppearanceLarge"
