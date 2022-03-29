@@ -16,7 +16,7 @@ public class ScoreBoard {
         //player = new Player(player1);//i don't think this does anything
         player = player1;
     }
-    public Player getPlayer() {
+    public static Player getPlayer() {
         return player;
     }
     public void setLevel(int level) {
@@ -25,7 +25,7 @@ public class ScoreBoard {
     public static int getLevel() {
         return player.getLevel();
     }
-    public int checkName(){
+    public static int checkName(){
         int index = -1;
         if(getLevel()==1){
             index = getIndex(sbEasy,player.getName());
@@ -36,7 +36,7 @@ public class ScoreBoard {
         }
         return index;
     }
-    public void replacePlayer(){//as long as there's a index where the name is present replace the previous player with present if score is higher
+    public static void replacePlayer(){//as long as there's a index where the name is present replace the previous player with present if score is higher
         if(checkName()>-1) {
             if (getLevel() == 1 && sbEasy[checkName()].getScore() > player.getScore()) {
                 sbEasy[checkName()] = player;
