@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import android.widget.LinearLayout;
@@ -112,7 +113,7 @@ public class GameScreen extends AppCompatActivity {
 
 
     public void buttonClicked(View v) {
-
+        Button btn = (Button) findViewById(R.id.button2);
         int guess;
         //
         EditText guessInt = (EditText) findViewById(R.id.guessInt);
@@ -121,17 +122,17 @@ public class GameScreen extends AppCompatActivity {
         z.addPlayer(x);
         //
         if (guess < result) {
-            score++;
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too Low");
         } else if (guess > result && guess <= max) {
-            score++;
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too High");
         } else if (guess > max){
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between 1 and " + max);
-        } else {
-            score++;
+        } else if (guess == result){
+            guessInt.setEnabled(false);
+            btn.setEnabled(false);
             ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
             //z.setPlayer(player);
+            score++;
             ScoreBoard.addPlayer(player);
             if (z.checkName() != -1) {
                 highScore = player.getScore();
