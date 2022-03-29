@@ -63,4 +63,17 @@ public class Player {
             return "Better luck next time!";
         }
     }
+    public void clearPlayer(int a){
+        if(a==1){
+            setScore(0);
+            setLevel(level);
+        }else if(a==2){
+            setScore(0);
+            setLevel(0);
+        }else{
+            setScore(0);
+            setLevel(0);
+            setName("");
+        }
+    }
 }

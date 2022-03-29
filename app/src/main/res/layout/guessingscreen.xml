@@ -17,6 +17,7 @@
         android:gravity="center"
         android:inputType="phone"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.497"
@@ -27,7 +28,7 @@
 
     <Button
         android:id="@+id/changeLevel"
-        android:layout_width="154dp"
+        android:layout_width="wrap_content"
         android:layout_height="59dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="112dp"
@@ -56,13 +57,14 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="188dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#0F2850"
         android:fontFamily="serif-monospace"
         android:onClick="buttonClicked"
         android:text="CHECK MY GUESS"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/guessInt"
@@ -111,7 +113,7 @@
 
     <Button
         android:id="@+id/resetGame"
-        android:layout_width="159dp"
+        android:layout_width="wrap_content"
         android:layout_height="59dp"
         android:layout_marginTop="112dp"
         android:layout_marginEnd="32dp"

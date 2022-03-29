@@ -26,17 +26,19 @@ import java.util.logging.Level;
 
 
 public class GameScreen extends AppCompatActivity {
-    private final int max = getMax();
+    private int max = getMax();
+    private static Player x = InputNameActivity.getCurrent();
 
 
     public int getMax(){
-        if(x.getLevel()==1){
+        if(InputNameActivity.getCurrent().getLevel()==1){
             return 20;
-        }else if(x.getLevel()==2){
+        }else if(InputNameActivity.getCurrent().getLevel()==2){
             return 50;
-        }else{
+        }else if(InputNameActivity.getCurrent().getLevel()==3){
             return 100;
         }
+        return -1;
     }
 
     @Override
@@ -98,7 +100,6 @@ public class GameScreen extends AppCompatActivity {
         });
     }
 
-    private static Player x = InputNameActivity.getCurrent();
     //int min = 1;
     int result = getRandom(1,max);
 
@@ -154,6 +155,7 @@ public class GameScreen extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
         startActivity(intent);//LEVEL DOESN'T SHOW IDKY
         overridePendingTransition(0,0);
+        x.clearPlayer(1);
 
     }
     public void changeLevel(View v){
