@@ -129,10 +129,14 @@ public class GameScreen extends AppCompatActivity {
         } else if (guess > max){
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between 1 and " + max);
         } else {
+            score++;
             ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
+            //z.setPlayer(player);
+            ScoreBoard.addPlayer(player);
             if (z.checkName() != -1) {
                 highScore = player.getScore();
-                z.setPlayer(player);
+                //z.setPlayer(player);
+                //ScoreBoard.addPlayer(player);
                 if (highScore < score) {
                     z.replacePlayer();
                 }

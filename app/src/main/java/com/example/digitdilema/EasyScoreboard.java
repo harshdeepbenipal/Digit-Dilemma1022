@@ -71,7 +71,11 @@ public class EasyScoreboard extends AppCompatActivity {
         });
         String[] x = new String[10];
         for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
-            x[i] = ScoreBoard.getScoreboard(1)[i].getName();//adds the name
+            if(ScoreBoard.getScoreboard(1)[i]==null){
+                x[i] = "---";
+            }else{
+                x[i] = ScoreBoard.getScoreboard(1)[i].getName();//adds the name
+            }
         }
         ((TextView) findViewById(R.id.name1)).setText(x[0]);//should work in theory
         ((TextView) findViewById(R.id.name2)).setText(x[1]);

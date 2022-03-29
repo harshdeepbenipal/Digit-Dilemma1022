@@ -11,8 +11,10 @@ public class ScoreBoard {
         setLevel(0);
         player.setDate();
     }
-    public void setPlayer(Player player) {
-        this.player = player;
+
+    public static void setPlayer(Player player1) {
+        player = new Player(player1);
+        player = player1;
     }
     public static Player getPlayer() {
         return player;
@@ -74,7 +76,7 @@ public class ScoreBoard {
             return sbHard;
         }
     }
-    public void addPlayer(Player player){
+    public static void addPlayer(Player player){
         setPlayer(player);
         if(checkName()==-1){
             int x = getIndex(sbEasy,"");
@@ -92,18 +94,20 @@ public class ScoreBoard {
         }
     }
     public static int getIndex(Player[] a, String x){//checking the
+        System.out.println("BONJOUR");
         for(int i = 0;i<10;i++){
             if(a[i]!=null){
                 if(a[i].getName().equals(x)){
+                    System.out.println("HOLA");
                     return i;
                 }
             }
         }
-        for(int i = 0;i<10;i++){
+        /*for(int i = 0;i<10;i++){
             if(a[i]==null){
                return i;
             }
-        }
+        }*/
         return -1;
     }
 }

@@ -15,8 +15,14 @@ public class Player {
         setScore(0);
         setLevel(0);
     }
-    public void setName(String name){
-        this.name = name;
+    public Player(Player player){
+        setName(player.getName());
+        setScore(player.getScore());
+        setLevel(player.getLevel());
+        setDate(player.getDate());
+    }
+    public void setName(String newName){
+        name = newName;
     }
     public String getName() {
         return name;
@@ -37,6 +43,9 @@ public class Player {
         DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
         Date date = new Date();
         this.date = dateFormat.format(date);
+    }
+    public void setDate(String date){
+        this.date = date;
     }
     public String getDate() {
         return date;
