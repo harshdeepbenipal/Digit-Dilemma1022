@@ -74,7 +74,6 @@ public class InputNameActivity extends AppCompatActivity {
         current.setName(nS);
         current.setDate();
         current.setLevel(LevelActivity.getCurrent());
-        System.out.println(current.getLevel()+"OMG IM GONNA DIE");
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
         startActivity(intent);
         overridePendingTransition(0,0);
