@@ -120,6 +120,7 @@ public class GameScreen extends AppCompatActivity {
         Button btn = (Button) findViewById(R.id.button2);
         int guess;
         //
+        try{
         EditText guessInt = (EditText) findViewById(R.id.guessInt);
         guess = Integer.parseInt(guessInt.getText().toString());
         ScoreBoard z = new ScoreBoard();
@@ -149,6 +150,9 @@ public class GameScreen extends AppCompatActivity {
                     z.replacePlayer();
                 }
             }
+        }
+        } catch (NumberFormatException nfe){
+            ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between A Valid Integer");
         }
         ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+highScore);
         ((TextView) findViewById(R.id.displayScore)).setText("Score: "+score);
