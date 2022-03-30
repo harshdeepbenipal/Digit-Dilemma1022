@@ -127,10 +127,8 @@ public class GameScreen extends AppCompatActivity {
         z.addPlayer(x);
         //
         if (guess < result) {
-            score++;
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too Low");
         } else if (guess > result && guess <= max) {
-            score++;
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too High");
         } else if (guess > max){
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between 1 and " + max);
@@ -152,7 +150,7 @@ public class GameScreen extends AppCompatActivity {
             }
         }
         } catch (NumberFormatException nfe){
-            ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between A Valid Integer");
+            ((TextView) findViewById(R.id.answer)).setText("You Must Guess A Number");
         }
         ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+highScore);
         ((TextView) findViewById(R.id.displayScore)).setText("Score: "+score);
@@ -194,4 +192,9 @@ public class GameScreen extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed(){
+    }
+
 }
