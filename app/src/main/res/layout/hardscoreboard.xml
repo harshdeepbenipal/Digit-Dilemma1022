@@ -117,6 +117,7 @@
         >
 
         <TextView
+            android:id="@+id/hd1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -127,6 +128,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/hname1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="1"
@@ -137,6 +139,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/hscore1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
@@ -166,6 +169,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/hd2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -175,6 +179,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/name2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="1"
@@ -184,6 +189,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hscore2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
@@ -215,6 +221,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/hd3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -225,6 +232,7 @@
 
 
         <TextView
+            android:id="@+id/hname3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="1"
@@ -234,6 +242,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hscore3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
@@ -263,6 +272,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/hd4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -272,6 +282,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hname4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="1"
@@ -281,6 +292,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hscore4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
@@ -310,6 +322,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/hd5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -319,6 +332,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hname5"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="1"
@@ -328,6 +342,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hscore5"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
@@ -357,6 +372,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/hd6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -366,6 +382,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hname6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="1"
@@ -375,6 +392,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hscore6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
@@ -404,6 +422,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/hd7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -413,6 +432,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hname7"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="1"
@@ -422,6 +442,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hscore7"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
@@ -451,6 +472,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/hd8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -460,16 +482,18 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hname8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_column="1"
 
+            android:layout_column="1"
             android:layout_margin="1dp"
             android:background="#FFFFFF"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hscore8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
@@ -499,6 +523,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/hd9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -508,6 +533,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hname9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="1"
@@ -517,6 +543,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hscore9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
@@ -546,6 +573,7 @@
         android:background="#000000">
 
         <TextView
+            android:id="@+id/hd10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -555,6 +583,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hname10"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="1"
@@ -564,6 +593,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/hscore10"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
