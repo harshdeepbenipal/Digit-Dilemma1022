@@ -5,9 +5,9 @@ import android.content.Intent;
 public class ScoreBoard {
     private static Player player = new Player();
    // private static int level;
-    private static Player sbEasy[] = new Player[10];
-    private static Player sbMedium[] = new Player[10];
-    private static Player sbHard[] = new Player[10];
+    public static Player[] sbEasy = new Player[10];
+    private static Player[] sbMedium = new Player[10];
+    private static Player[] sbHard = new Player[10];
 
     public ScoreBoard(){
         setLevel(0);
@@ -80,30 +80,32 @@ public class ScoreBoard {
     public static void addPlayer(Player player){
         setPlayer(player);
         //if(checkName()==-1){
-            int x = getIndex(sbMedium,null);
-            if(getLevel()==1){
-                sbEasy[x] = player;
+            if(getLevel()==1 || getLevel() == 0){ // i put 0 here as the level would not go back to 1 after player againing
+                int x = getIndex(sbEasy, null);
+                sbEasy[x] = new Player(player);
             }
-            x = getIndex(sbMedium,null);
-            if(getLevel()==2&&x!=-1){
-                sbMedium[x] = player;
+            else if(getLevel()==2){
+                int x = getIndex(sbMedium,null);
+                sbMedium[x] =  new Player(player);
             }
-            x = getIndex(sbHard,null);
-            if(getLevel()==3&&x!=-1){
-                sbHard[x] = player;
+            else if(getLevel()==3){
+                int x = getIndex(sbHard,null);
+                sbHard[x] =  new Player(player);
             }
         //}
     }
     public static int getIndex(Player[] a, String x){//checking the
         //System.out.println("BONJOUR"); //Testing lol
+
         for(int i = 0;i<10;i++){
             if(a[i]==null) {
-                //System.out.println("HOLA"); //testing
                 return i;
-            }else if (a[i].getName().equals(x)){
+            }
+
+            /*else if (a[i].getName().equals(x)){  - look into this idk if this works
                     //System.out.println("HELLO"); //testing
                     return i;
-            }
+            }*/
         }
         /*for(int i = 0;i<10;i++){
             if(a[i]==null){

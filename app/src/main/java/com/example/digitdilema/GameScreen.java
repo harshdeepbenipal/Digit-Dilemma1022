@@ -124,13 +124,18 @@ public class GameScreen extends AppCompatActivity {
         EditText guessInt = (EditText) findViewById(R.id.guessInt);
         guess = Integer.parseInt(guessInt.getText().toString());
         ScoreBoard z = new ScoreBoard();
-        z.addPlayer(x);
         //
         if (guess < result) {
             score++;
+            for (int i = 0; i<10; i++){
+                System.out.println(ScoreBoard.sbEasy[i] + "hi");
+            }
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too Low");
         } else if (guess > result && guess <= max) {
             score++;
+            for (int i = 0; i<10; i++){
+                System.out.println(ScoreBoard.sbEasy[i] + "hi");
+            }
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too High");
         } else if (guess > max){
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between 1 and " + max);
@@ -138,18 +143,19 @@ public class GameScreen extends AppCompatActivity {
             guessInt.setEnabled(false);
             btn.setEnabled(false);
             ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
-            //z.setPlayer(player);
             score++;
             player.setScore(score);
             ScoreBoard.addPlayer(player);
-            if (z.checkName() != -1) {
+
+
+            /*if (z.checkName() != -1) { - look into this, idk if this works
                 highScore = player.getScore();
                 //z.setPlayer(player);
                 //ScoreBoard.addPlayer(player);
                 if (highScore < score) {
                     z.replacePlayer();
                 }
-            }
+            }*/
         }
         } catch (NumberFormatException nfe){
             ((TextView) findViewById(R.id.answer)).setText("You Must Guess A Number");

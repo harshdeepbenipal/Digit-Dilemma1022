@@ -16,10 +16,10 @@ public class Player {
         setLevel(0);
     }
     public Player(Player player){
-        setName(player.getName());
-        setScore(player.getScore());
-        setLevel(player.getLevel());
-        setDate(player.getDate());
+        this.name = player.getName();
+        this.score = player.getScore();
+        this.level = player.getLevel();
+        this.date = player.getDate();
     }
     public void setName(String newName){
         name = newName;
@@ -66,13 +66,13 @@ public class Player {
     public void clearPlayer(int a){
         if(a==1){
             setScore(0);
-            setLevel(level);
+            setLevel(1);
         }else if(a==2){
             setScore(0);
-            setLevel(0);
+            setLevel(1);
         }else{
             setScore(0);
-            setLevel(0);
+            setLevel(1);
             setName("");
         }
     }
