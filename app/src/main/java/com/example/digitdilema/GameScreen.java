@@ -127,15 +127,9 @@ public class GameScreen extends AppCompatActivity {
         //
         if (guess < result) {
             score++;
-            for (int i = 0; i<10; i++){
-                System.out.println(ScoreBoard.sbEasy[i] + "hi");
-            }
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too Low");
         } else if (guess > result && guess <= max) {
             score++;
-            for (int i = 0; i<10; i++){
-                System.out.println(ScoreBoard.sbEasy[i] + "hi");
-            }
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too High");
         } else if (guess > max){
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between 1 and " + max);
