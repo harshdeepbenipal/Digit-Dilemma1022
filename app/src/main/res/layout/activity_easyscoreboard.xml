@@ -2,11 +2,12 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/easy_scoreboard"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
+    android:background="#304057"
     android:gravity="center"
     android:stretchColumns="0,1,2,3"
-    android:id="@+id/easy_scoreboard"
     app:layout_anchorGravity="center">
 
 
@@ -15,9 +16,25 @@
         android:layout_width="fill_parent"
         android:layout_height="93dp"
         android:layout_weight="1"
-        android:background="#FFFFFF"
+        android:background="#304057"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="370dp"
+            android:layout_height="75dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/easy_scoreboard"
+            android:textColor="#FFFFFF"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TableRow
             android:id="@+id/tableRow3"
@@ -36,24 +53,6 @@
 
         </TableRow>
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="370dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="12dp"
-            android:fontFamily="serif-monospace"
-            android:gravity="center"
-            android:text="@string/easy_scoreboard"
-            android:textColor="#D3000000"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TableRow
@@ -61,7 +60,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000"
+        android:background="#FFFFFF"
 
         >
 
@@ -70,11 +69,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/date"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
         <TextView
@@ -82,11 +82,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/name"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
         <TextView
@@ -94,11 +95,12 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/score"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
         <TextView
@@ -106,11 +108,12 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/rank"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
     </TableRow>
 
@@ -119,7 +122,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000"
+        android:background="#FFFFFF"
 
         >
 
@@ -129,12 +132,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#000000"
-            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
@@ -143,10 +146,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
@@ -155,10 +160,12 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
@@ -166,11 +173,12 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_1"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
     </TableRow>
 
@@ -179,7 +187,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#FFFFFF">
 
         <TextView
             android:id="@+id/d2"
@@ -187,11 +195,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/name2"
@@ -199,10 +208,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/escore2"
@@ -210,10 +221,12 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
 
@@ -222,11 +235,12 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_2"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
     </TableRow>
 
@@ -236,7 +250,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#FFFFFF">
 
         <TextView
             android:id="@+id/d3"
@@ -244,11 +258,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
 
         <TextView
@@ -257,10 +272,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/escore3"
@@ -268,21 +285,24 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_3"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </TableRow>
@@ -292,7 +312,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#FFFFFF">
 
         <TextView
             android:id="@+id/d4"
@@ -300,11 +320,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/name4"
@@ -312,10 +333,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/escore4"
@@ -323,21 +346,24 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_4"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </TableRow>
@@ -347,7 +373,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#FFFFFF">
 
         <TextView
             android:id="@+id/d5"
@@ -355,11 +381,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/name5"
@@ -367,10 +394,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/escore5"
@@ -378,21 +407,24 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_5"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </TableRow>
@@ -402,7 +434,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#FFFFFF">
 
         <TextView
             android:id="@+id/d6"
@@ -410,11 +442,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/name6"
@@ -422,10 +455,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/escore6"
@@ -433,21 +468,24 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_6"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </TableRow>
@@ -457,7 +495,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#FFFFFF">
 
         <TextView
             android:id="@+id/d7"
@@ -465,11 +503,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/name7"
@@ -477,10 +516,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/escore7"
@@ -488,21 +529,24 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_7"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </TableRow>
@@ -512,7 +556,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#FFFFFF">
 
         <TextView
             android:id="@+id/d8"
@@ -520,11 +564,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/name8"
@@ -533,10 +578,12 @@
 
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/escore8"
@@ -544,21 +591,24 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_8"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </TableRow>
@@ -568,7 +618,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#FFFFFF">
 
         <TextView
             android:id="@+id/d9"
@@ -576,11 +626,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/name9"
@@ -588,11 +639,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#000000" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/escore9"
@@ -600,22 +652,24 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#000000" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_9"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </TableRow>
@@ -625,7 +679,7 @@
         android:layout_height="0dp"
         android:layout_margin="1dp"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#FFFFFF">
 
         <TextView
             android:id="@+id/d10"
@@ -633,11 +687,12 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/name10"
@@ -645,10 +700,12 @@
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/escore10"
@@ -656,21 +713,24 @@
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
-            android:background="#FFFFFF"
-            android:fontFamily="serif-monospace"
+            android:background="#304057"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="@string/_10"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </TableRow>
