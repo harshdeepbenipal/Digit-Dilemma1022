@@ -91,4 +91,6 @@ public class MediumScoreboard extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

@@ -18,6 +18,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.logging.Level;
+
 public class InputNameActivity extends AppCompatActivity {
 
     @Override
@@ -100,5 +102,12 @@ public class InputNameActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0,0);
     }
 }

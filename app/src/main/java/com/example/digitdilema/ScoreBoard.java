@@ -1,5 +1,7 @@
 package com.example.digitdilema;
 
+import android.content.Intent;
+
 public class ScoreBoard {
     private static Player player = new Player();
    // private static int level;
@@ -110,4 +112,6 @@ public class ScoreBoard {
         }*/
         return -1;
     }
+
+
 }

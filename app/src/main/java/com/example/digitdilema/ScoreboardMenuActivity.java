@@ -77,7 +77,9 @@ public class ScoreboardMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ScoreboardMenuActivity.this, MediumScoreboard.class );
-                startActivity(intent); }
+                startActivity(intent);
+                overridePendingTransition(0,0);
+            }
 
         });
 
@@ -85,14 +87,18 @@ public class ScoreboardMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ScoreboardMenuActivity.this, EasyScoreboard.class );
-                startActivity(intent); }
+                startActivity(intent);
+                overridePendingTransition(0,0);
+            }
         });
 
         hardbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ScoreboardMenuActivity.this, HardScoreboard.class );
-                startActivity(intent); }
+                startActivity(intent);
+                overridePendingTransition(0,0);
+            }
         });
     }
 
@@ -103,6 +109,7 @@ public class ScoreboardMenuActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.header, menu);
         return true;
     }
+
 }
 
 
