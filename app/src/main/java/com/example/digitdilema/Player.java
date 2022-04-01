@@ -8,6 +8,8 @@ public class Player {
     private int score;
     private int level;
     private String date;
+    private int highscore;
+
    // public String rank; rank instance variable for the order of players might change in the scoreboard class when highscore changes
 
     public Player(){
@@ -29,6 +31,12 @@ public class Player {
     }
     public void setScore(int score){
         this.score = score;
+    }
+    public void setHighscore(int score){
+        this.highscore = score;
+    }
+    public int getHighscore(){
+        return highscore;
     }
     public int getScore() {
         return score;
@@ -66,13 +74,14 @@ public class Player {
     public void clearPlayer(int a){
         if(a==1){
             setScore(0);
-            setLevel(1);
-        }else if(a==2){
+        }
+        else if(a == 2){
             setScore(0);
-            setLevel(1);
-        }else{
-            setScore(0);
-            setLevel(1);
+            setHighscore(0);
+        }
+        else{
+            setHighscore(0);
+            setLevel(0);
             setName("");
         }
     }

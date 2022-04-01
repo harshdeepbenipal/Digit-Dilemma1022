@@ -74,6 +74,7 @@ public class GameScreen extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
+                        player.clearPlayer(0);
                         return true;
                     case R.id.help:
                         ConstraintLayout layout = findViewById(R.id.guess);
@@ -107,8 +108,8 @@ public class GameScreen extends AppCompatActivity {
     int result = getRandom(1,max);
 
     private int score;
-    private int highScore = 0;
     private Player player = x;
+    private int highScore = player.getHighscore();
     public static int getRandom(int min, int max){
         return (int) ((Math.random() * (max - min)) + min);
     }
@@ -119,11 +120,11 @@ public class GameScreen extends AppCompatActivity {
     public void buttonClicked(View v) {
         Button btn = (Button) findViewById(R.id.button2);
         int guess;
+        System.out.println(result);
         //
         try{
         EditText guessInt = (EditText) findViewById(R.id.guessInt);
         guess = Integer.parseInt(guessInt.getText().toString());
-        ScoreBoard z = new ScoreBoard();
         //
         if (guess < result) {
             score++;
@@ -140,16 +141,11 @@ public class GameScreen extends AppCompatActivity {
             score++;
             player.setScore(score);
             ScoreBoard.addPlayer(player);
-
-
-            /*if (z.checkName() != -1) { - look into this, idk if this works
-                highScore = player.getScore();
-                //z.setPlayer(player);
-                //ScoreBoard.addPlayer(player);
-                if (highScore < score) {
-                    z.replacePlayer();
-                }
-            }*/
+            System.out.println(player.getLevel());
+            if (score < highScore || highScore == 0){
+                highScore = score;
+                player.setHighscore(score);
+            }
         }
         } catch (NumberFormatException nfe){
             ((TextView) findViewById(R.id.answer)).setText("You Must Guess A Number");
@@ -160,15 +156,15 @@ public class GameScreen extends AppCompatActivity {
 
     public void resetGame(View v){
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
-        startActivity(intent);//LEVEL DOESN'T SHOW IDKY
+        startActivity(intent);
         overridePendingTransition(0,0);
         x.clearPlayer(1);
-
     }
     public void changeLevel(View v){
         Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
         startActivity(intent);
         overridePendingTransition(0,0);
+        x.clearPlayer(0);
     }
 
 
@@ -187,6 +183,7 @@ public class GameScreen extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), ScoreboardMenuActivity.class);
                 startActivity(intent);
                 overridePendingTransition(0,0);
+                player.clearPlayer(0);
                 break;
 
 
