@@ -107,7 +107,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="105dp"
+            android:layout_width="94dp"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"

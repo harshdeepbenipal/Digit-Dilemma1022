@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -65,6 +66,58 @@ public class MediumScoreboard extends AppCompatActivity {
                 return false;
             }
         });
+        String[] x = new String[10];
+        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
+            if(ScoreBoard.getScoreboard(2)[i]==null){
+                x[i] = "---";
+            }else{
+                x[i] = ScoreBoard.getScoreboard(2)[i].getName();//adds the name
+            }
+        }
+        ((TextView) findViewById(R.id.mname1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.mname2)).setText(x[1]);
+        ((TextView) findViewById(R.id.mname3)).setText(x[2]);
+        ((TextView) findViewById(R.id.mname4)).setText(x[3]);
+        ((TextView) findViewById(R.id.mname5)).setText(x[4]);
+        ((TextView) findViewById(R.id.mname6)).setText(x[5]);
+        ((TextView) findViewById(R.id.mname7)).setText(x[6]);
+        ((TextView) findViewById(R.id.mname8)).setText(x[7]);
+        ((TextView) findViewById(R.id.mname9)).setText(x[8]);
+        ((TextView) findViewById(R.id.mname10)).setText(x[9]);
+        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
+            if(ScoreBoard.getScoreboard(2)[i]==null){
+                x[i] = "--/--/----";
+            }else{
+                x[i] = ScoreBoard.getScoreboard(2)[i].getDate();//adds the name
+            }
+        }
+        ((TextView) findViewById(R.id.md1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.md2)).setText(x[1]);
+        ((TextView) findViewById(R.id.md3)).setText(x[2]);
+        ((TextView) findViewById(R.id.md4)).setText(x[3]);
+        ((TextView) findViewById(R.id.md5)).setText(x[4]);
+        ((TextView) findViewById(R.id.md6)).setText(x[5]);
+        ((TextView) findViewById(R.id.md7)).setText(x[6]);
+        ((TextView) findViewById(R.id.md8)).setText(x[7]);
+        ((TextView) findViewById(R.id.md9)).setText(x[8]);
+        ((TextView) findViewById(R.id.md10)).setText(x[9]);
+        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
+            if(ScoreBoard.getScoreboard(1)[i]==null){
+                x[i] = "---";
+            }else{
+                x[i] = ScoreBoard.getScoreboard(1)[i].getScore()+"";//adds the name
+            }
+        }
+        ((TextView) findViewById(R.id.mscore1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.mscore2)).setText(x[1]);
+        ((TextView) findViewById(R.id.mscore3)).setText(x[2]);
+        ((TextView) findViewById(R.id.mscore4)).setText(x[3]);
+        ((TextView) findViewById(R.id.mscore5)).setText(x[4]);
+        ((TextView) findViewById(R.id.mscore6)).setText(x[5]);
+        ((TextView) findViewById(R.id.mscore7)).setText(x[6]);
+        ((TextView) findViewById(R.id.mscore8)).setText(x[7]);
+        ((TextView) findViewById(R.id.mscore9)).setText(x[8]);
+        ((TextView) findViewById(R.id.mscore10)).setText(x[9]);
 
 
 

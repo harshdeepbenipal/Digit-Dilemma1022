@@ -77,16 +77,11 @@ public class InputNameActivity extends AppCompatActivity {
         current.setName(nS);
         current.setDate();
         current.setLevel(LevelActivity.getCurrent());
-        int a = ScoreBoard.checkName(current.getLevel());
-        System.out.println(a);
-        if(a==-1){
-            ScoreBoard.setPlayer(current);
-            Intent intent = new Intent(getApplicationContext(), GameScreen.class);
-            startActivity(intent);
-            overridePendingTransition(0,0);
-        }else{
-            ((TextView) findViewById(R.id.oopsName)).setText("This Name Is Already On The Scoreboard" + "\n" + "Please Input Another Name");
-        }
+        current.setHighscore(0);
+        ScoreBoard.setPlayer(current);
+        Intent intent = new Intent(getApplicationContext(), GameScreen.class);
+        startActivity(intent);
+        overridePendingTransition(0,0);
     }
     public static Player getCurrent() {
         return current;

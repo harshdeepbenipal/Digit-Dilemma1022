@@ -34,19 +34,6 @@ public class ScoreBoard {
         return player.getLevel();
     }
 
-    public static int checkName(int level) {
-        int index = -1;
-        if (level == 1) {
-            index = getIndex(sbEasy,player.getName());
-        } else if (level == 2) {
-            index = getIndex(sbMedium,player.getName());
-        } else if (level == 3) {
-            index = getIndex(sbHard,player.getName());
-        }
-        return index;
-    }
-
-
     public static void sort(Player[] list) { // Implement in the scoreboards java files maybe also with given array not sure
         for (int i = 1; i < list.length; i++) {
             for (int j = i; j > 0; j--) {

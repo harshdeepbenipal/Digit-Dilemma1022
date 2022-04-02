@@ -65,7 +65,7 @@
         >
 
         <TextView
-            android:layout_width="108dp"
+            android:layout_width="91dp"
             android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_margin="1dp"
@@ -78,7 +78,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="105dp"
+            android:layout_width="99dp"
             android:layout_height="match_parent"
             android:layout_column="1"
             android:layout_margin="1dp"
@@ -91,7 +91,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="105dp"
+            android:layout_width="78dp"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
@@ -104,7 +104,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="74dp"
+            android:layout_width="63dp"
             android:layout_height="match_parent"
             android:layout_column="2"
             android:layout_margin="1dp"
@@ -240,8 +240,7 @@
             android:gravity="center"
             android:text="@string/_2"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
     </TableRow>
 
 
@@ -302,8 +301,7 @@
             android:gravity="center"
             android:text="@string/_3"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
 
     </TableRow>
 
@@ -363,8 +361,7 @@
             android:gravity="center"
             android:text="@string/_4"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
 
     </TableRow>
 
@@ -424,8 +421,7 @@
             android:gravity="center"
             android:text="@string/_5"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
 
     </TableRow>
 
@@ -485,8 +481,7 @@
             android:gravity="center"
             android:text="@string/_6"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
 
     </TableRow>
 
@@ -546,8 +541,7 @@
             android:gravity="center"
             android:text="@string/_7"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
 
     </TableRow>
 
@@ -608,8 +602,7 @@
             android:gravity="center"
             android:text="@string/_8"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
 
     </TableRow>
 
@@ -669,8 +662,7 @@
             android:gravity="center"
             android:text="@string/_9"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
 
     </TableRow>
 
@@ -730,8 +722,7 @@
             android:gravity="center"
             android:text="@string/_10"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
 
     </TableRow>
 

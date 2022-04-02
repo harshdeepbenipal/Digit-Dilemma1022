@@ -95,7 +95,7 @@ public class HardScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.hd1)).setText(x[0]);//should work in theory
         ((TextView) findViewById(R.id.hd2)).setText(x[1]);
         ((TextView) findViewById(R.id.hd3)).setText(x[2]);
-        ((TextView) findViewById(R.id.hd5)).setText(x[3]);
+        ((TextView) findViewById(R.id.hd4)).setText(x[3]);
         ((TextView) findViewById(R.id.hd5)).setText(x[4]);
         ((TextView) findViewById(R.id.hd6)).setText(x[5]);
         ((TextView) findViewById(R.id.hd7)).setText(x[6]);
