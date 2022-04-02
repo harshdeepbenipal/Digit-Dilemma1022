@@ -169,6 +169,10 @@ public class GameScreen extends AppCompatActivity {
                                 break;
                             }
                         }
+                        else if(i == 9){
+                            ScoreBoard.addPlayer(player);
+                            break;
+                        }
                     }
                     else{
                         ScoreBoard.addPlayer(player);
@@ -190,6 +194,10 @@ public class GameScreen extends AppCompatActivity {
                                 break;
                             }
                         }
+                        else if(i == 9){
+                            ScoreBoard.addPlayer(player);
+                            break;
+                        }
                     }
                     else{
                         ScoreBoard.addPlayer(player);
@@ -210,6 +218,10 @@ public class GameScreen extends AppCompatActivity {
                             else{
                                 break;
                             }
+                        }
+                        else if(i == 9){
+                            ScoreBoard.addPlayer(player);
+                            break;
                         }
                     }
                     else{
@@ -233,7 +245,12 @@ public class GameScreen extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
         startActivity(intent);
         overridePendingTransition(0,0);
-        x.clearPlayer(1);
+        if (score > highScore){
+            player.setHighscore(highScore);
+        }
+        else{
+            x.clearPlayer(1);
+        }
     }
     public void changeLevel(View v){
         Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
