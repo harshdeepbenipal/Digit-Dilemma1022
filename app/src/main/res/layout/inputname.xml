@@ -47,7 +47,6 @@
         android:id="@+id/enter"
         android:layout_width="155dp"
         android:layout_height="54dp"
-        android:layout_marginTop="52dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="monospace"
         android:onClick="buttonClicked"
@@ -58,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="@+id/name"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/oopsName" />
+        tools:layout_editor_absoluteY="346dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
@@ -71,17 +70,5 @@
         app:menu="@menu/footer">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-    <TextView
-        android:id="@+id/oopsName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:fontFamily="monospace"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/name"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
