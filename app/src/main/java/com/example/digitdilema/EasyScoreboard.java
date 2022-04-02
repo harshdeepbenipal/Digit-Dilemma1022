@@ -19,14 +19,13 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class EasyScoreboard extends AppCompatActivity {
-    //private static ScoreBoard x = InputNameActivity.getCurrent();
-    //private Player player = x.getPlayer();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easyscoreboard);
+
+        // footer menu, add to every oncreate method
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView2);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem item = menu.getItem(0);
@@ -67,15 +66,16 @@ public class EasyScoreboard extends AppCompatActivity {
                 return false;
             }
         });
+        // creates the scoreboard table
         String[] x = new String[10];
-        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
+        for(int i = 0;i<x.length;i++){
             if(ScoreBoard.getScoreboard(1)[i]==null){
                 x[i] = "---";
             }else{
-                x[i] = ScoreBoard.getScoreboard(1)[i].getName();//adds the name
+                x[i] = ScoreBoard.getScoreboard(1)[i].getName();
             }
         }
-        ((TextView) findViewById(R.id.name1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.name1)).setText(x[0]);
         ((TextView) findViewById(R.id.name2)).setText(x[1]);
         ((TextView) findViewById(R.id.name3)).setText(x[2]);
         ((TextView) findViewById(R.id.name4)).setText(x[3]);
@@ -85,14 +85,14 @@ public class EasyScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.name8)).setText(x[7]);
         ((TextView) findViewById(R.id.name9)).setText(x[8]);
         ((TextView) findViewById(R.id.name10)).setText(x[9]);
-        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
+        for(int i = 0;i<x.length;i++){
             if(ScoreBoard.getScoreboard(1)[i]==null){
                 x[i] = "--/--/----";
             }else{
-                x[i] = ScoreBoard.getScoreboard(1)[i].getDate();//adds the name
+                x[i] = ScoreBoard.getScoreboard(1)[i].getDate();
             }
         }
-        ((TextView) findViewById(R.id.d1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.d1)).setText(x[0]);
         ((TextView) findViewById(R.id.d2)).setText(x[1]);
         ((TextView) findViewById(R.id.d3)).setText(x[2]);
         ((TextView) findViewById(R.id.d4)).setText(x[3]);
@@ -102,14 +102,14 @@ public class EasyScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.d8)).setText(x[7]);
         ((TextView) findViewById(R.id.d9)).setText(x[8]);
         ((TextView) findViewById(R.id.d10)).setText(x[9]);
-        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
+        for(int i = 0;i<x.length;i++){
             if(ScoreBoard.getScoreboard(1)[i]==null){
                 x[i] = "---";
             }else{
-                x[i] = ScoreBoard.getScoreboard(1)[i].getScore()+"";//adds the name
+                x[i] = ScoreBoard.getScoreboard(1)[i].getScore()+"";
             }
         }
-        ((TextView) findViewById(R.id.escore1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.escore1)).setText(x[0]);
         ((TextView) findViewById(R.id.escore2)).setText(x[1]);
         ((TextView) findViewById(R.id.escore3)).setText(x[2]);
         ((TextView) findViewById(R.id.escore4)).setText(x[3]);

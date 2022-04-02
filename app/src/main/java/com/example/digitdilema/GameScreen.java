@@ -45,12 +45,13 @@ public class GameScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guessingscreen);
         TextView level = (TextView) findViewById(R.id.displayLevel);
+        // sets the player's variables
         x.setLevel(InputNameActivity.getCurrent().getLevel());
         x.setDate(InputNameActivity.getCurrent().getDate());
         x.setName(InputNameActivity.getCurrent().getName());
         x.setHighscore(InputNameActivity.getCurrent().getHighscore());
 
-        if(x.getLevel() == 1){//don't need the l variable
+        if(x.getLevel() == 1){
             level.setText("Level: Easy");
         }else if(x.getLevel() == 2){
             level.setText("Level: Medium");
@@ -75,7 +76,7 @@ public class GameScreen extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
-                        player.clearPlayer(0);
+                        x.clearPlayer(0);
                         return true;
                     case R.id.help:
                         ConstraintLayout layout = findViewById(R.id.guess);
@@ -105,12 +106,11 @@ public class GameScreen extends AppCompatActivity {
         });
     }
 
-    //int min = 1;
     int result = getRandom(1,max);
 
     private int score;
     private Player player = x;
-    private int highScore = player.getScore();
+    private int highScore = player.getHighscore();
     public static int getRandom(int min, int max){
         return (int) ((Math.random() * (max - min)) + min);
     }
@@ -145,6 +145,7 @@ public class GameScreen extends AppCompatActivity {
                 highScore = score;
                 player.setHighscore(score);
             }
+            // adds the player's score to the scoreboard if their score is good enough
             if(player.getLevel() == 1){
                 for (int i = 0; i < 10; i++){
                     if(ScoreBoard.getScoreboard(1)[i] != null){
@@ -247,7 +248,7 @@ public class GameScreen extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), ScoreboardMenuActivity.class);
                 startActivity(intent);
                 overridePendingTransition(0,0);
-                player.clearPlayer(0);
+                x.clearPlayer(0);
                 break;
 
 
