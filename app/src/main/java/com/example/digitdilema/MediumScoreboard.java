@@ -102,10 +102,10 @@ public class MediumScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.md9)).setText(x[8]);
         ((TextView) findViewById(R.id.md10)).setText(x[9]);
         for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
-            if(ScoreBoard.getScoreboard(1)[i]==null){
+            if(ScoreBoard.getScoreboard(2)[i]==null){
                 x[i] = "---";
             }else{
-                x[i] = ScoreBoard.getScoreboard(1)[i].getScore()+"";//adds the name
+                x[i] = ScoreBoard.getScoreboard(2)[i].getScore()+"";//adds the name
             }
         }
         ((TextView) findViewById(R.id.mscore1)).setText(x[0]);//should work in theory
