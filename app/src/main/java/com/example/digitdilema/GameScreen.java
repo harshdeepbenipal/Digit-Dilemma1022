@@ -29,7 +29,6 @@ public class GameScreen extends AppCompatActivity {
     private int max = getMax();
     private static Player x = new Player();
 
-
     public int getMax(){
         if(InputNameActivity.getCurrent().getLevel()==1){
             return 20;
@@ -49,6 +48,8 @@ public class GameScreen extends AppCompatActivity {
         x.setLevel(InputNameActivity.getCurrent().getLevel());
         x.setDate(InputNameActivity.getCurrent().getDate());
         x.setName(InputNameActivity.getCurrent().getName());
+        x.setHighscore(InputNameActivity.getCurrent().getHighscore());
+
         if(x.getLevel() == 1){//don't need the l variable
             level.setText("Level: Easy");
         }else if(x.getLevel() == 2){
@@ -74,7 +75,7 @@ public class GameScreen extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
-                        //player.clearPlayer(0);
+                        player.clearPlayer(0);
                         return true;
                     case R.id.help:
                         ConstraintLayout layout = findViewById(R.id.guess);
@@ -109,7 +110,7 @@ public class GameScreen extends AppCompatActivity {
 
     private int score;
     private Player player = x;
-    private int highScore = player.getHighscore();
+    private int highScore = player.getScore();
     public static int getRandom(int min, int max){
         return (int) ((Math.random() * (max - min)) + min);
     }
@@ -140,12 +141,75 @@ public class GameScreen extends AppCompatActivity {
             ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
             score++;
             player.setScore(score);
-            ScoreBoard.addPlayer(player);
-            System.out.println(player.getLevel());
             if (score < highScore || highScore == 0){
                 highScore = score;
                 player.setHighscore(score);
             }
+            if(player.getLevel() == 1){
+                for (int i = 0; i < 10; i++){
+                    if(ScoreBoard.getScoreboard(1)[i] != null){
+                        if(ScoreBoard.getScoreboard(1)[i].getName().equals(player.getName())){
+                            if(ScoreBoard.getScoreboard(1)[i].getScore() >= highScore){
+                                ScoreBoard.getScoreboard(1)[i].setScore(highScore);
+                                ScoreBoard.getScoreboard(1)[i].setDate();
+                                break;
+                            }
+                            else{
+                                break;
+                            }
+                        }
+                    }
+                    else{
+                        ScoreBoard.addPlayer(player);
+                        break;
+                    }
+                }
+            }
+
+            else if(player.getLevel() == 2){
+                for (int i = 0; i < 10; i++){
+                    if(ScoreBoard.getScoreboard(2)[i] != null){
+                        if(ScoreBoard.getScoreboard(2)[i].getName().equals(player.getName())){
+                            if(ScoreBoard.getScoreboard(2)[i].getScore() >= highScore){
+                                ScoreBoard.getScoreboard(2)[i].setScore(highScore);
+                                ScoreBoard.getScoreboard(2)[i].setDate();
+                                break;
+                            }
+                            else{
+                                break;
+                            }
+                        }
+                    }
+                    else{
+                        ScoreBoard.addPlayer(player);
+                        break;
+                    }
+                }
+            }
+
+            else{
+                for (int i = 0; i < 10; i++){
+                    if(ScoreBoard.getScoreboard(3)[i] != null){
+                        if(ScoreBoard.getScoreboard(3)[i].getName().equals(player.getName())){
+                            if(ScoreBoard.getScoreboard(3)[i].getScore() >= highScore){
+                                ScoreBoard.getScoreboard(3)[i].setScore(highScore);
+                                ScoreBoard.getScoreboard(3)[i].setDate();
+                                break;
+                            }
+                            else{
+                                break;
+                            }
+                        }
+                    }
+                    else{
+                        ScoreBoard.addPlayer(player);
+                        break;
+                    }
+                }
+            }
+
+
+
         }
         } catch (NumberFormatException nfe){
             ((TextView) findViewById(R.id.answer)).setText("You Must Guess A Number");

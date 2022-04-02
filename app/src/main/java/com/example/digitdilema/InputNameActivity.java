@@ -77,7 +77,10 @@ public class InputNameActivity extends AppCompatActivity {
         current.setName(nS);
         current.setDate();
         current.setLevel(LevelActivity.getCurrent());
-        current.setHighscore(0);
+        int a = ScoreBoard.checkName(current.getLevel(), current);
+        if (a > -1){
+            current.setHighscore(ScoreBoard.getScoreboard(current.getLevel())[a].getScore());
+        }
         ScoreBoard.setPlayer(current);
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
         startActivity(intent);
