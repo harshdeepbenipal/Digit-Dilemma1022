@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -72,13 +74,19 @@ public class InputNameActivity extends AppCompatActivity {
     public void buttonClicked(View v){
         EditText nameView = (EditText) findViewById(R.id.name);
         String nS = nameView.getText().toString();
-
         current.setName(nS);
         current.setDate();
         current.setLevel(LevelActivity.getCurrent());
-        Intent intent = new Intent(getApplicationContext(), GameScreen.class);
-        startActivity(intent);
-        overridePendingTransition(0,0);
+        int a = ScoreBoard.checkName();
+        System.out.println(a);
+        if(a==-1){
+            ScoreBoard.setPlayer(current);
+            Intent intent = new Intent(getApplicationContext(), GameScreen.class);
+            startActivity(intent);
+            overridePendingTransition(0,0);
+        }else{
+            ((TextView) findViewById(R.id.oopsName)).setText("The name is already on the scoreboard try another :)");
+        }
     }
     public static Player getCurrent() {
         return current;

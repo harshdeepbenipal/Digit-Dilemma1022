@@ -37,11 +37,11 @@ public class ScoreBoard {
     public static int checkName() {
         int index = -1;
         if (getLevel() == 1) {
-            index = getIndex(sbEasy);//,player.getName());
+            index = getIndex(sbEasy,player.getName());
         } else if (getLevel() == 2) {
-            index = getIndex(sbMedium);//,player.getName());
+            index = getIndex(sbMedium,player.getName());
         } else if (getLevel() == 3) {
-            index = getIndex(sbHard);//,player.getName());
+            index = getIndex(sbHard,player.getName());
         }
         return index;
     }
@@ -159,6 +159,17 @@ public class ScoreBoard {
         for (int i = 0; i < 10; i++) {
             if (a[i] == null) {
                 return i;
+            }
+        }
+        return -1;
+    }
+    public static int getIndex(Player[] a, String x){//checking the
+        //System.out.println("BONJOUR"); //Testing lol
+
+        for(int i = 0;i<10;i++){
+            if (a[i].getName().equals(x)){ // - look into this idk if this works
+                    System.out.println("HELLO"); //testing
+                    return i;
             }
         }
         return -1;

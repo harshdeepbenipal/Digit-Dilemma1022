@@ -74,7 +74,7 @@ public class GameScreen extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
-                        player.clearPlayer(0);
+                        //player.clearPlayer(0);
                         return true;
                     case R.id.help:
                         ConstraintLayout layout = findViewById(R.id.guess);
