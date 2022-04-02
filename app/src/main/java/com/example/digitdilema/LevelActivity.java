@@ -65,11 +65,11 @@ public class LevelActivity extends AppCompatActivity {
             }
         });
     }
-    public static Player temp = new Player();
+    public static Player temp = new Player();//to store level for player
 
     public void buttonClicked(View v){
-        switch (v.getId()){
-            case R.id.easy://sets the level given the case for the scoreboard
+        switch (v.getId()){//sets the level given the case for the scoreboard using button id
+            case R.id.easy:
                 temp.setLevel(1);
                 break;
             case R.id.medium:
@@ -80,15 +80,21 @@ public class LevelActivity extends AppCompatActivity {
                 break;
         }
 
-        Intent intent = new Intent(getApplicationContext(), InputNameActivity.class);
-        startActivity(intent);
-        overridePendingTransition(0,0);
+        if(!GameScreen.getChange()){//Change is false when the player is created
+            Intent intent = new Intent(getApplicationContext(), InputNameActivity.class);
+            startActivity(intent);
+            overridePendingTransition(0,0);
+        }else{//Change is true when the player name stays the same but level is changed
+            Intent intent = new Intent(getApplicationContext(), GameScreen.class);
+            startActivity(intent);
+            overridePendingTransition(0,0);
+        }
 
     }
 
     public static int getCurrent() {
         return temp.getLevel();
-    }
+    }//returns the level selected from the buttons on the level menu
 
     // header menu
     @Override
