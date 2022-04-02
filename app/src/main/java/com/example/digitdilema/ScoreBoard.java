@@ -7,6 +7,7 @@ import java.util.Arrays;
 
 public class ScoreBoard {
     private static Player player = new Player();
+    // private static int level;
     public static Player[] sbEasy = new Player[10];
     private static Player[] sbMedium = new Player[10];
     private static Player[] sbHard = new Player[10];
@@ -17,6 +18,7 @@ public class ScoreBoard {
     }
 
     public static void setPlayer(Player player1) {
+        //player = new Player(player1);//i don't think this does anything
         player = player1;
     }
 
@@ -32,14 +34,14 @@ public class ScoreBoard {
         return player.getLevel();
     }
 
-    public static int checkName(int level) {
+    public static int checkName(int level, Player p) {
         int index = -1;
         if (level == 1) {
-            index = getIndex(sbEasy, player.getName());
+            index = getIndex(sbEasy, p.getName());
         } else if (level == 2) {
-            index = getIndex(sbMedium, player.getName());
+            index = getIndex(sbMedium, p.getName());
         } else if (level == 3) {
-            index = getIndex(sbHard, player.getName());
+            index = getIndex(sbHard, p.getName());
         }
         return index;
     }
