@@ -7,8 +7,7 @@ import java.util.Arrays;
 
 public class ScoreBoard {
     private static Player player = new Player();
-    // private static int level;
-    public static Player[] sbEasy = new Player[10];
+    private static Player[] sbEasy = new Player[10];
     private static Player[] sbMedium = new Player[10];
     private static Player[] sbHard = new Player[10];
 
@@ -18,12 +17,7 @@ public class ScoreBoard {
     }
 
     public static void setPlayer(Player player1) {
-        //player = new Player(player1);//i don't think this does anything
         player = player1;
-    }
-
-    public static Player getPlayer() {
-        return player;
     }
 
     public void setLevel(int level) {
@@ -48,7 +42,7 @@ public class ScoreBoard {
 
 
 
-    public static void sort(Player[] list) { // Implement in the scoreboards java files maybe also with given array not sure
+    public static void sort(Player[] list) {
         for (int i = 1; i < list.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (list[i] != null) {

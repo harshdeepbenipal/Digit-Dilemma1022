@@ -132,7 +132,6 @@ public class GameScreen extends AppCompatActivity {
     public void buttonClicked(View v) {
         Button btn = (Button) findViewById(R.id.button2);
         int guess;
-        System.out.println(result);
         //
         try{
         EditText guessInt = (EditText) findViewById(R.id.guessInt);

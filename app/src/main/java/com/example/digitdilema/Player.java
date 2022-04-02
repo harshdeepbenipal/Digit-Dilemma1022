@@ -8,9 +8,7 @@ public class Player {
     private int score;
     private int level;
     private String date;
-    private int highscore;
-
-   // public String rank; rank instance variable for the order of players might change in the scoreboard class when highscore changes
+    private int highScore;
 
     public Player(){
         setName("");
@@ -33,10 +31,10 @@ public class Player {
         this.score = score;
     }
     public void setHighscore(int score){
-        this.highscore = score;
+        this.highScore = score;
     }
     public int getHighscore(){
-        return highscore;
+        return highScore;
     }
     public int getScore() {
         return score;
@@ -48,7 +46,7 @@ public class Player {
         return level;
     }
     public void setDate(){
-        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         Date date = new Date();
         this.date = dateFormat.format(date);
     }
@@ -57,19 +55,6 @@ public class Player {
     }
     public String getDate() {
         return date;
-    }
-    /*public void setRank(int rank) {//sets the rank as the given index but plus one
-        this.rank = rank+1+"";
-    }
-    public String getRank() {
-        return rank;
-    }*/
-    public String getInformation(boolean change){
-        if(change){
-            return "Congratulations! New high score of " + score + "!";
-        }else{
-            return "Better luck next time!";
-        }
     }
     public void clearPlayer(int a){
         if(a==1){

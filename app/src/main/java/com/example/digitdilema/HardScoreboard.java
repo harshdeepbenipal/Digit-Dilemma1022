@@ -87,7 +87,7 @@ public class HardScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.hname10)).setText(x[9]);
         for (int i = 0; i < x.length; i++) {//Doesn't work rn crashes the app, i'll look at it
             if (ScoreBoard.getScoreboard(3)[i] == null) {
-                x[i] = "--/--/----";
+                x[i] = "--:--:--";
             } else {
                 x[i] = ScoreBoard.getScoreboard(3)[i].getDate();//adds the name
             }

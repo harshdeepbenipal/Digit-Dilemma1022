@@ -87,7 +87,7 @@ public class EasyScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.name10)).setText(x[9]);
         for(int i = 0;i<x.length;i++){
             if(ScoreBoard.getScoreboard(1)[i]==null){
-                x[i] = "--/--/----";
+                x[i] = "--:--:--";
             }else{
                 x[i] = ScoreBoard.getScoreboard(1)[i].getDate();
             }
