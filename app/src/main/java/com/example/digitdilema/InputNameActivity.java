@@ -11,16 +11,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.logging.Level;
 
 public class InputNameActivity extends AppCompatActivity {
 
@@ -79,7 +75,7 @@ public class InputNameActivity extends AppCompatActivity {
         current.setLevel(LevelActivity.getCurrent());
         int a = ScoreBoard.checkName(current.getLevel(), current);
         if (a > -1){
-            current.setHighscore(ScoreBoard.getScoreboard(current.getLevel())[a].getScore());
+            current.setHighScore(ScoreBoard.getScoreboard(current.getLevel())[a].getScore());
         }
         ScoreBoard.setPlayer(current);
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);

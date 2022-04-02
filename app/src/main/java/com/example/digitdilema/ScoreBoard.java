@@ -6,16 +6,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ScoreBoard {
+    //instance variables
     private static Player player = new Player();
     private static Player[] sbEasy = new Player[10];
     private static Player[] sbMedium = new Player[10];
     private static Player[] sbHard = new Player[10];
 
+    //constructor
     public ScoreBoard() {
         setLevel(0);
         player.setDate();
     }
 
+    //setters and getters for the instance variables
     public static void setPlayer(Player player1) {
         player = player1;
     }
@@ -28,6 +31,7 @@ public class ScoreBoard {
         return player.getLevel();
     }
 
+    //checks if player exists in the level scoreboard stored
     public static int checkName(int level, Player p) {
         int index = -1;
         if (level == 1) {
@@ -40,8 +44,7 @@ public class ScoreBoard {
         return index;
     }
 
-
-
+    //sorts array from lowest score to highest
     public static void sort(Player[] list) {
         for (int i = 1; i < list.length; i++) {
             for (int j = i; j > 0; j--) {
@@ -56,6 +59,7 @@ public class ScoreBoard {
         }
     }
 
+    //returns the sorted scoreboard needed indicated my the level parameter when called on
     public static Player[] getScoreboard(int level) {
         if (level == 1) {
             sort(sbEasy);
@@ -69,6 +73,7 @@ public class ScoreBoard {
         }
     }
 
+    //adds the player object to the designated array using its level and score
     public static void addPlayer(Player player) {
         setPlayer(player);
         if (getLevel() == 1) {
@@ -144,6 +149,7 @@ public class ScoreBoard {
         }
         return -1;
     }
+    //gets index when any of the names in the player array match the string
     public static int getIndex(Player[] a, String x){
         for(int i = 0;i<10;i++){
             if(a[i] != null){

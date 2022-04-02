@@ -22,17 +22,15 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.logging.Level;
-
 
 public class GameScreen extends AppCompatActivity {
-    private int max = getMax();
-    private static Player x = new Player();
+    private int max = getMax(); //calls on getMax to get the max for the random range
+    private static Player x = new Player(); //creates a player object to reference while playing
 
     public int getMax(){
-        if(getChange()){
-            setChange(false);
-            if(LevelActivity.getCurrent()==1){
+        if(getChange()){//if this was a level change
+            setChange(false);//no longer a level change
+            if(LevelActivity.getCurrent()==1){//gets level directly from level activity
                 return 20;
             }else if(LevelActivity.getCurrent()==2){
                 return 50;
@@ -40,7 +38,7 @@ public class GameScreen extends AppCompatActivity {
                 return 100;
             }
         }else{
-            if(InputNameActivity.getCurrent().getLevel()==1){
+            if(InputNameActivity.getCurrent().getLevel()==1){//gets level from inputname activity
                 return 20;
             }else if(InputNameActivity.getCurrent().getLevel()==2){
                 return 50;
@@ -48,7 +46,7 @@ public class GameScreen extends AppCompatActivity {
                 return 100;
             }
         }
-        return -1;
+        return -1;//mainly for testing purposes but will return -1 if none of the consditions are met
     }
 
     @Override
@@ -60,8 +58,9 @@ public class GameScreen extends AppCompatActivity {
         x.setLevel(LevelActivity.getCurrent());
         x.setDate(InputNameActivity.getCurrent().getDate());
         x.setName(InputNameActivity.getCurrent().getName());
-        x.setHighscore(InputNameActivity.getCurrent().getHighscore());
+        x.setHighScore(InputNameActivity.getCurrent().getHighScore());
 
+        //sets the text for the displayLevel textbox
         if(x.getLevel() == 1){
             level.setText("Level: Easy");
         }else if(x.getLevel() == 2){
@@ -69,6 +68,7 @@ public class GameScreen extends AppCompatActivity {
         }else if(x.getLevel() == 3){
             level.setText("Level: Hard");
         }
+        //displays the name, score and highscore on the guessing screen at the start
         ((TextView) findViewById(R.id.displayName)).setText("Name: "+player.getName());
         ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+highScore);
         ((TextView) findViewById(R.id.displayScore)).setText("Score: "+score);
@@ -87,7 +87,7 @@ public class GameScreen extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
-                        x.clearPlayer(0);
+                        x.clearPlayer(0);//fully clears player
                         return true;
                     case R.id.help:
                         ConstraintLayout layout = findViewById(R.id.guess);
@@ -117,17 +117,16 @@ public class GameScreen extends AppCompatActivity {
         });
     }
 
-    int result = getRandom(1,max);
+    int result = getRandom(1,max); //gets a random number for the player to guess from the range
 
-    private int score;
+    private int score; //local score to change the displaying score
     private Player player = x;
-    private int highScore = player.getHighscore();
+    private int highScore = player.getHighScore();//gets the highest score the player has played
+
+    //generates random value for the guess
     public static int getRandom(int min, int max){
         return (int) ((Math.random() * (max - min)) + min);
     }
-
-
-
 
     public void buttonClicked(View v) {
         Button btn = (Button) findViewById(R.id.button2);
@@ -136,24 +135,24 @@ public class GameScreen extends AppCompatActivity {
         try{
         EditText guessInt = (EditText) findViewById(R.id.guessInt);
         guess = Integer.parseInt(guessInt.getText().toString());
-        //
-        if (guess < result) {
-            score++;
-            ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too Low");
-        } else if (guess > result && guess <= max) {
+
+        if (guess > 0 && guess < result) {//when the guess is lower than the value
+            score++;//score increases (guesses used)
+            ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too Low");//sets the text for answer text box
+        } else if (guess > result && guess <= max) {//when the guess is higher than the value as long as its within the range
             score++;
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Is Too High");
-        } else if (guess > max){
+        } else if (guess > max || guess < 1){//when they go over or under the number limit
             ((TextView) findViewById(R.id.answer)).setText("Your Guess Must Be Between 1 and " + max);
-        } else if (guess == result){
-            guessInt.setEnabled(false);
-            btn.setEnabled(false);
+        } else if (guess == result){ //guess is correct
+            guessInt.setEnabled(false);//value cannot be inputted
+            btn.setEnabled(false);//button is disabled
             ((TextView) findViewById(R.id.answer)).setText("Correct Guess!\n");
-            score++;
+            score++;//score goes up
             player.setScore(score);
-            if (score < highScore || highScore == 0){
+            if (score < highScore || highScore == 0){//if they have a previous score which is higher than their new one
                 highScore = score;
-                player.setHighscore(score);
+                player.setHighScore(score);
             }
             // adds the player's score to the scoreboard if their score is good enough
             if(player.getLevel() == 1){
@@ -246,10 +245,10 @@ public class GameScreen extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(0,0);
         if (score > highScore){
-            player.setHighscore(highScore);
+            player.setHighScore(highScore);
         }
         else{
-            x.clearPlayer(1);
+            x.clearPlayer(1);//clears score keeping name and level
         }
     }
     public void changeLevel(View v){
@@ -257,7 +256,7 @@ public class GameScreen extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(0,0);
         setChange(true);
-        x.clearPlayer(0);
+        x.clearPlayer(0);//clears player other than name
     }
     public static boolean getChange() {
         return change;

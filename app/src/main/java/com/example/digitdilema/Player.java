@@ -4,23 +4,26 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Player {
+    //instance variables
     private String name;
     private int score;
     private int level;
     private String date;
     private int highScore;
 
-    public Player(){
+    public Player(){//creates a player object without parameters,and setting it empty
         setName("");
         setScore(0);
         setLevel(0);
     }
-    public Player(Player player){
+    public Player(Player player){//creates a player using another
         this.name = player.getName();
         this.score = player.getScore();
         this.level = player.getLevel();
         this.date = player.getDate();
     }
+
+    //setters and getters for the instance variables defining the Player object
     public void setName(String newName){
         name = newName;
     }
@@ -30,10 +33,10 @@ public class Player {
     public void setScore(int score){
         this.score = score;
     }
-    public void setHighscore(int score){
+    public void setHighScore(int score){
         this.highScore = score;
     }
-    public int getHighscore(){
+    public int getHighScore(){
         return highScore;
     }
     public int getScore() {
@@ -45,7 +48,7 @@ public class Player {
     public int getLevel() {
         return level;
     }
-    public void setDate(){
+    public void setDate(){//sets the time when the player object is created
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         Date date = new Date();
         this.date = dateFormat.format(date);
@@ -56,16 +59,17 @@ public class Player {
     public String getDate() {
         return date;
     }
+    //clears the player given the case using the int parameter
     public void clearPlayer(int a){
         if(a==1){
             setScore(0);
         }
         else if(a == 2){
             setScore(0);
-            setHighscore(0);
+            setHighScore(0);
         }
         else{
-            setHighscore(0);
+            setHighScore(0);
             setLevel(0);
         }
     }

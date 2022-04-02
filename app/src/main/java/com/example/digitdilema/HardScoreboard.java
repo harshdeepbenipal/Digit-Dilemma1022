@@ -65,17 +65,16 @@ public class HardScoreboard extends AppCompatActivity {
                 return false;
             }
         });
-
-
-        String[] x = new String[10];
-        for (int i = 0; i < x.length; i++) {//Doesn't work rn crashes the app, i'll look at it
-            if (ScoreBoard.getScoreboard(3)[i] == null) {
+        // creates the scoreboard table for hard scoreboard
+        String[] x = new String[10];//empty string array used for displaying
+        for (int i = 0; i < x.length; i++) {
+            if (ScoreBoard.getScoreboard(3)[i] == null) {//if the index is empty a string is used for displaying
                 x[i] = "---";
             } else {
-                x[i] = ScoreBoard.getScoreboard(3)[i].getName();//adds the name
+                x[i] = ScoreBoard.getScoreboard(3)[i].getName();//sets the name to display
             }
         }
-        ((TextView) findViewById(R.id.hname1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.hname1)).setText(x[0]);
         ((TextView) findViewById(R.id.hname2)).setText(x[1]);
         ((TextView) findViewById(R.id.hname3)).setText(x[2]);
         ((TextView) findViewById(R.id.hname4)).setText(x[3]);
@@ -85,14 +84,14 @@ public class HardScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.hname8)).setText(x[7]);
         ((TextView) findViewById(R.id.hname9)).setText(x[8]);
         ((TextView) findViewById(R.id.hname10)).setText(x[9]);
-        for (int i = 0; i < x.length; i++) {//Doesn't work rn crashes the app, i'll look at it
-            if (ScoreBoard.getScoreboard(3)[i] == null) {
+        for (int i = 0; i < x.length; i++) {
+            if (ScoreBoard.getScoreboard(3)[i] == null) {//if the index is empty a string is used for displaying
                 x[i] = "--:--:--";
             } else {
-                x[i] = ScoreBoard.getScoreboard(3)[i].getDate();//adds the name
+                x[i] = ScoreBoard.getScoreboard(3)[i].getDate();//sets the Time to display
             }
         }
-        ((TextView) findViewById(R.id.hd1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.hd1)).setText(x[0]);
         ((TextView) findViewById(R.id.hd2)).setText(x[1]);
         ((TextView) findViewById(R.id.hd3)).setText(x[2]);
         ((TextView) findViewById(R.id.hd4)).setText(x[3]);
@@ -102,11 +101,11 @@ public class HardScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.hd8)).setText(x[7]);
         ((TextView) findViewById(R.id.hd9)).setText(x[8]);
         ((TextView) findViewById(R.id.hd10)).setText(x[9]);
-        for (int i = 0; i < x.length; i++) {//Doesn't work rn crashes the app, i'll look at it
-            if (ScoreBoard.getScoreboard(3)[i] == null) {
+        for (int i = 0; i < x.length; i++) {
+            if (ScoreBoard.getScoreboard(3)[i] == null) {//if the index is empty a string is used for displaying
                 x[i] = "---";
             } else {
-                x[i] = ScoreBoard.getScoreboard(3)[i].getScore() + "";//adds the name
+                x[i] = ScoreBoard.getScoreboard(3)[i].getScore() + "";//sets the score to display
             }
         }
         ((TextView) findViewById(R.id.hscore1)).setText(x[0]);

@@ -66,13 +66,13 @@ public class EasyScoreboard extends AppCompatActivity {
                 return false;
             }
         });
-        // creates the scoreboard table
+        // creates the scoreboard table for easy scoreboard
         String[] x = new String[10];
         for(int i = 0;i<x.length;i++){
-            if(ScoreBoard.getScoreboard(1)[i]==null){
+            if(ScoreBoard.getScoreboard(1)[i]==null){//if the index is empty a string is used for displaying
                 x[i] = "---";
             }else{
-                x[i] = ScoreBoard.getScoreboard(1)[i].getName();
+                x[i] = ScoreBoard.getScoreboard(1)[i].getName();//sets the name to display
             }
         }
         ((TextView) findViewById(R.id.name1)).setText(x[0]);
@@ -86,10 +86,10 @@ public class EasyScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.name9)).setText(x[8]);
         ((TextView) findViewById(R.id.name10)).setText(x[9]);
         for(int i = 0;i<x.length;i++){
-            if(ScoreBoard.getScoreboard(1)[i]==null){
+            if(ScoreBoard.getScoreboard(1)[i]==null){//if the index is empty a string is used for displaying
                 x[i] = "--:--:--";
             }else{
-                x[i] = ScoreBoard.getScoreboard(1)[i].getDate();
+                x[i] = ScoreBoard.getScoreboard(1)[i].getDate();//sets the date to display
             }
         }
         ((TextView) findViewById(R.id.d1)).setText(x[0]);
@@ -103,10 +103,10 @@ public class EasyScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.d9)).setText(x[8]);
         ((TextView) findViewById(R.id.d10)).setText(x[9]);
         for(int i = 0;i<x.length;i++){
-            if(ScoreBoard.getScoreboard(1)[i]==null){
+            if(ScoreBoard.getScoreboard(1)[i]==null){//if the index is empty a string is used for displaying
                 x[i] = "---";
             }else{
-                x[i] = ScoreBoard.getScoreboard(1)[i].getScore()+"";
+                x[i] = ScoreBoard.getScoreboard(1)[i].getScore()+"";//sets the score to display
             }
         }
         ((TextView) findViewById(R.id.escore1)).setText(x[0]);

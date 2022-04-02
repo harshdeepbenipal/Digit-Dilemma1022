@@ -66,15 +66,16 @@ public class MediumScoreboard extends AppCompatActivity {
                 return false;
             }
         });
+        // creates the scoreboard table for easy scoreboard
         String[] x = new String[10];
-        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
-            if(ScoreBoard.getScoreboard(2)[i]==null){
+        for(int i = 0;i<x.length;i++){
+            if(ScoreBoard.getScoreboard(2)[i]==null){//if the index is empty a string is used for displaying
                 x[i] = "---";
             }else{
-                x[i] = ScoreBoard.getScoreboard(2)[i].getName();//adds the name
+                x[i] = ScoreBoard.getScoreboard(2)[i].getName();//sets the name to display
             }
         }
-        ((TextView) findViewById(R.id.mname1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.mname1)).setText(x[0]);
         ((TextView) findViewById(R.id.mname2)).setText(x[1]);
         ((TextView) findViewById(R.id.mname3)).setText(x[2]);
         ((TextView) findViewById(R.id.mname4)).setText(x[3]);
@@ -84,14 +85,14 @@ public class MediumScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.mname8)).setText(x[7]);
         ((TextView) findViewById(R.id.mname9)).setText(x[8]);
         ((TextView) findViewById(R.id.mname10)).setText(x[9]);
-        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
-            if(ScoreBoard.getScoreboard(2)[i]==null){
+        for(int i = 0;i<x.length;i++){
+            if(ScoreBoard.getScoreboard(2)[i]==null){//if the index is empty a string is used for displaying
                 x[i] = "--:--:--";
             }else{
-                x[i] = ScoreBoard.getScoreboard(2)[i].getDate();//adds the name
+                x[i] = ScoreBoard.getScoreboard(2)[i].getDate();//sets the date to display
             }
         }
-        ((TextView) findViewById(R.id.md1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.md1)).setText(x[0]);
         ((TextView) findViewById(R.id.md2)).setText(x[1]);
         ((TextView) findViewById(R.id.md3)).setText(x[2]);
         ((TextView) findViewById(R.id.md4)).setText(x[3]);
@@ -101,14 +102,14 @@ public class MediumScoreboard extends AppCompatActivity {
         ((TextView) findViewById(R.id.md8)).setText(x[7]);
         ((TextView) findViewById(R.id.md9)).setText(x[8]);
         ((TextView) findViewById(R.id.md10)).setText(x[9]);
-        for(int i = 0;i<x.length;i++){//Doesn't work rn crashes the app, i'll look at it
-            if(ScoreBoard.getScoreboard(2)[i]==null){
+        for(int i = 0;i<x.length;i++){
+            if(ScoreBoard.getScoreboard(2)[i]==null){//if the index is empty a string is used for displaying
                 x[i] = "---";
             }else{
-                x[i] = ScoreBoard.getScoreboard(2)[i].getScore()+"";//adds the name
+                x[i] = ScoreBoard.getScoreboard(2)[i].getScore()+"";//sets the score to display
             }
         }
-        ((TextView) findViewById(R.id.mscore1)).setText(x[0]);//should work in theory
+        ((TextView) findViewById(R.id.mscore1)).setText(x[0]);
         ((TextView) findViewById(R.id.mscore2)).setText(x[1]);
         ((TextView) findViewById(R.id.mscore3)).setText(x[2]);
         ((TextView) findViewById(R.id.mscore4)).setText(x[3]);
