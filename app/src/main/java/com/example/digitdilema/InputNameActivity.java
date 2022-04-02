@@ -77,7 +77,7 @@ public class InputNameActivity extends AppCompatActivity {
         current.setName(nS);
         current.setDate();
         current.setLevel(LevelActivity.getCurrent());
-        int a = ScoreBoard.checkName();
+        int a = ScoreBoard.checkName(current.getLevel());
         System.out.println(a);
         if(a==-1){
             ScoreBoard.setPlayer(current);

@@ -34,29 +34,18 @@ public class ScoreBoard {
         return player.getLevel();
     }
 
-    public static int checkName() {
+    public static int checkName(int level) {
         int index = -1;
-        if (getLevel() == 1) {
+        if (level == 1) {
             index = getIndex(sbEasy,player.getName());
-        } else if (getLevel() == 2) {
+        } else if (level == 2) {
             index = getIndex(sbMedium,player.getName());
-        } else if (getLevel() == 3) {
+        } else if (level == 3) {
             index = getIndex(sbHard,player.getName());
         }
         return index;
     }
 
-    public static void replacePlayer() {//as long as there's a index where the name is present replace the previous player with present if score is higher
-        if (checkName() > -1) {
-            if (getLevel() == 1 && sbEasy[checkName()].getScore() > player.getScore()) {
-                sbEasy[checkName()] = player;
-            } else if (getLevel() == 2 && sbMedium[checkName()].getScore() > player.getScore()) {
-                sbMedium[checkName()] = player;
-            } else if (getLevel() == 3 && sbHard[checkName()].getScore() > player.getScore()) {
-                sbHard[checkName()] = player;
-            }
-        }
-    }
 
     public static void sort(Player[] list) { // Implement in the scoreboards java files maybe also with given array not sure
         for (int i = 1; i < list.length; i++) {
@@ -167,7 +156,10 @@ public class ScoreBoard {
         //System.out.println("BONJOUR"); //Testing lol
 
         for(int i = 0;i<10;i++){
-            if (a[i].getName().equals(x)){ // - look into this idk if this works
+            if(a[i]==null){
+                return -1;
+            }
+            else if (a[i].getName().equals(x)){ // - look into this idk if this works
                     System.out.println("HELLO"); //testing
                     return i;
             }
