@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class ScoreBoard {
     private static Player player = new Player();
     // private static int level;
-    private static Player[] sbEasy = new Player[10];
+    public static Player[] sbEasy = new Player[10];
     private static Player[] sbMedium = new Player[10];
     private static Player[] sbHard = new Player[10];
 
@@ -34,6 +34,20 @@ public class ScoreBoard {
         return player.getLevel();
     }
 
+    public static int checkName(int level, Player p) {
+        int index = -1;
+        if (level == 1) {
+            index = getIndex(sbEasy, p.getName());
+        } else if (level == 2) {
+            index = getIndex(sbMedium, p.getName());
+        } else if (level == 3) {
+            index = getIndex(sbHard, p.getName());
+        }
+        return index;
+    }
+
+
+
     public static void sort(Player[] list) { // Implement in the scoreboards java files maybe also with given array not sure
         for (int i = 1; i < list.length; i++) {
             for (int j = i; j > 0; j--) {
@@ -46,9 +60,6 @@ public class ScoreBoard {
                 }
             }
         }
-        /*for(int i = 0;i< list.length;i++){ what does this even do? question to self
-            list[i].getPlayer();
-        }*/
     }
 
     public static Player[] getScoreboard(int level) {
@@ -139,16 +150,12 @@ public class ScoreBoard {
         }
         return -1;
     }
-    public static int getIndex(Player[] a, String x){//checking the
-        //System.out.println("BONJOUR"); //Testing lol
-
+    public static int getIndex(Player[] a, String x){
         for(int i = 0;i<10;i++){
-            if(a[i]==null){
-                return -1;
-            }
-            else if (a[i].getName().equals(x)){ // - look into this idk if this works
-                    System.out.println("HELLO"); //testing
+            if(a[i] != null){
+                if (a[i].getName().equals(x)){
                     return i;
+                }
             }
         }
         return -1;
