@@ -70,7 +70,7 @@ public class GameScreen extends AppCompatActivity {
             level.setText("Level: Hard");
         }
         ((TextView) findViewById(R.id.displayName)).setText("Name: "+player.getName());
-        ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+highScore);
+        ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+x.getHighscore());
         ((TextView) findViewById(R.id.displayScore)).setText("Score: "+score);
 
         // footer menu, add to every oncreate method
