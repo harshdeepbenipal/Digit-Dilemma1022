@@ -85,7 +85,7 @@ public class InputNameActivity extends AppCompatActivity {
             startActivity(intent);
             overridePendingTransition(0,0);
         }else{
-            ((TextView) findViewById(R.id.oopsName)).setText("The name is already on the scoreboard try another :)");
+            ((TextView) findViewById(R.id.oopsName)).setText("This Name Is Already On The Scoreboard" + "\n" + "Please Input Another Name");
         }
     }
     public static Player getCurrent() {
