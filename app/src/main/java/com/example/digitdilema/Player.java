@@ -82,7 +82,6 @@ public class Player {
         else{
             setHighscore(0);
             setLevel(0);
-            setName("");
         }
     }
 }

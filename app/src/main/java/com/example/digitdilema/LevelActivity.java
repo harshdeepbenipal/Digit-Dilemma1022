@@ -80,11 +80,16 @@ public class LevelActivity extends AppCompatActivity {
         }
 
         //temp.getlevel(1) to get the thingy to do the thing when its time to do the thing.
-
-
-        Intent intent = new Intent(getApplicationContext(), InputNameActivity.class);
-        startActivity(intent);
-        overridePendingTransition(0,0);
+        if(!GameScreen.getChange()){
+            Intent intent = new Intent(getApplicationContext(), InputNameActivity.class);
+            startActivity(intent);
+            overridePendingTransition(0,0);
+           //GameScreen.setChange(false);
+        }else{
+            Intent intent = new Intent(getApplicationContext(), GameScreen.class);
+            startActivity(intent);
+            overridePendingTransition(0,0);
+        }
 
     }
 

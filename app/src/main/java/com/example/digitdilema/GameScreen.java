@@ -30,12 +30,23 @@ public class GameScreen extends AppCompatActivity {
     private static Player x = new Player();
 
     public int getMax(){
-        if(InputNameActivity.getCurrent().getLevel()==1){
-            return 20;
-        }else if(InputNameActivity.getCurrent().getLevel()==2){
-            return 50;
-        }else if(InputNameActivity.getCurrent().getLevel()==3){
-            return 100;
+        if(getChange()){
+            setChange(false);
+            if(LevelActivity.getCurrent()==1){
+                return 20;
+            }else if(LevelActivity.getCurrent()==2){
+                return 50;
+            }else if(LevelActivity.getCurrent()==3){
+                return 100;
+            }
+        }else{
+            if(InputNameActivity.getCurrent().getLevel()==1){
+                return 20;
+            }else if(InputNameActivity.getCurrent().getLevel()==2){
+                return 50;
+            }else if(InputNameActivity.getCurrent().getLevel()==3){
+                return 100;
+            }
         }
         return -1;
     }
@@ -46,7 +57,7 @@ public class GameScreen extends AppCompatActivity {
         setContentView(R.layout.guessingscreen);
         TextView level = (TextView) findViewById(R.id.displayLevel);
         // sets the player's variables
-        x.setLevel(InputNameActivity.getCurrent().getLevel());
+        x.setLevel(LevelActivity.getCurrent());
         x.setDate(InputNameActivity.getCurrent().getDate());
         x.setName(InputNameActivity.getCurrent().getName());
         x.setHighscore(InputNameActivity.getCurrent().getHighscore());
@@ -59,7 +70,7 @@ public class GameScreen extends AppCompatActivity {
             level.setText("Level: Hard");
         }
         ((TextView) findViewById(R.id.displayName)).setText("Name: "+player.getName());
-        ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+highScore);
+        ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+x.getHighscore());
         ((TextView) findViewById(R.id.displayScore)).setText("Score: "+score);
 
         // footer menu, add to every oncreate method
@@ -218,7 +229,7 @@ public class GameScreen extends AppCompatActivity {
         ((TextView) findViewById(R.id.displayHighScore)).setText("Highscore: "+highScore);
         ((TextView) findViewById(R.id.displayScore)).setText("Score: "+score);
     }
-
+    private static boolean change = false;
     public void resetGame(View v){
         Intent intent = new Intent(getApplicationContext(), GameScreen.class);
         startActivity(intent);
@@ -229,9 +240,15 @@ public class GameScreen extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
         startActivity(intent);
         overridePendingTransition(0,0);
+        setChange(true);
         x.clearPlayer(0);
     }
-
+    public static boolean getChange() {
+        return change;
+    }
+    public static void setChange(boolean a){
+        change = a;
+    }
 
     // header menu
     @Override
